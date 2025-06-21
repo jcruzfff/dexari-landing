@@ -11,7 +11,7 @@ export default function HeroSection({ isBannerVisible }: HeroSectionProps) {
     <section className={`relative w-full min-h-screen flex items-center transition-all duration-300 ${isBannerVisible ? 'pt-[24px] lg:pt-[160px] xl:pt-[140px]' : 'pt-[64px] lg:pt-[80px] xl:pt-[100px]'}`}>
       <div className="w-full px-4 sm:px-8 md:px-16 lg:px-24 xl:px-[120px]">
         <div className="max-w-[1224px] mx-auto">
-          <div className="flex flex-col xl:flex-row items-center xl:items-start justify-between gap-8 xl:gap-16">
+        <div className="flex flex-col xl:flex-row items-center xl:items-start justify-between gap-8 xl:gap-16">
           {/* Left Content */}
           <div className="flex-1 max-w-[660px] xl:max-w-none">
             <div className="flex flex-col gap-6 md:gap-8 lg:gap-[42px]">
@@ -73,9 +73,9 @@ export default function HeroSection({ isBannerVisible }: HeroSectionProps) {
               <div className="text-white/50 text-center">
                 <p>Hero Image/Animation</p>
               </div>
+              </div>
             </div>
           </div>
-        </div>
         </div>
       </div>
     </section>

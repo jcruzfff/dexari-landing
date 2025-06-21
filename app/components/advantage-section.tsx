@@ -40,7 +40,7 @@ export default function AdvantageSection() {
       <div className="hidden xl:block absolute inset-0 items-center justify-center" style={{ paddingTop: '120px' }}>
         <div className="relative w-[85%] h-[800px] xl:h-[900px] mx-auto">
           <Image
-            src="/advantage-background.svg"
+            src="/Advantage-pantheon.svg"
             alt="Dexari advantage background"
             fill
             className="object-contain object-center"
@@ -62,10 +62,10 @@ export default function AdvantageSection() {
       </div>
 
       {/* Mobile Image - Show as section element on screens below xl */}
-      <div className="xl:hidden flex justify-center mb-[-24px] lg:mb-16 relative z-10">
-        <div className="relative w-[85%] h-[370px] sm:h-[420px] lg:h-[540px]">
+      <div className="xl:hidden flex justify-center mb-[-18px] lg:mb-16 relative z-10">
+        <div className="relative w-[100%] h-[370px] sm:h-[420px] lg:h-[540px]">
           <Image
-            src="/advantage-image-mobile.svg"
+            src="/advantage-pantheon-mobile.svg"
             alt="Dexari advantage mobile"
             fill
             className="object-contain object-center"

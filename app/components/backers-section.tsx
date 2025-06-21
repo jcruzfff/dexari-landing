@@ -39,9 +39,7 @@ export default function BackersSection() {
                 <div className="flex flex-wrap items-center gap-8 lg:gap-11 mb-6">
                   {/* LED - Prelude */}
                   <div className="flex flex-col gap-2.5">
-                    <span className="text-[#b38d5f] text-sm font-['Avenir_Next'] font-medium tracking-[0.1px]">
-                      LED
-                    </span>
+                 
                     <div className="h-[39px] w-[222px] flex items-center justify-center">
                       <Image
                         src="/prelude-icon.svg"
@@ -55,9 +53,7 @@ export default function BackersSection() {
                   
                   {/* CO-LED - Lemniscap */}
                   <div className="flex flex-col gap-2.5">
-                    <span className="text-[#b38d5f] text-sm font-['Avenir_Next'] font-medium tracking-[0.1px]">
-                      CO-LED
-                    </span>
+                   
                     <div className="h-[45px] w-[226px] flex items-center justify-center">
                       <Image
                         src="/lemniscap-icon.svg"
@@ -106,9 +102,7 @@ export default function BackersSection() {
               <div className="lg:hidden">
                 {/* LED - Prelude */}
                 <div className="mb-6">
-                  <span className="text-[#b38d5f] text-sm font-['Avenir_Next'] font-medium tracking-[0.1px] block mb-2.5">
-                    LED
-                  </span>
+                
                   <div className="h-[39px] w-[222px] flex items-center justify-center">
                     <Image
                       src="/prelude-icon.svg"
@@ -122,9 +116,7 @@ export default function BackersSection() {
                 
                 {/* CO-LED - Lemniscap */}
                 <div className="mb-6">
-                  <span className="text-[#b38d5f] text-sm font-['Avenir_Next'] font-medium tracking-[0.1px] block mb-2.5">
-                    CO-LED
-                  </span>
+               
                   <div className="h-[45px] w-[226px] flex items-center justify-center">
                     <Image
                       src="/lemniscap-icon.svg"
@@ -138,35 +130,33 @@ export default function BackersSection() {
 
                 {/* Additional Investors */}
                 <div className="mb-6">
-                  <span className="text-[#b38d5f] text-sm font-['Avenir_Next'] font-medium tracking-[0.1px] block mb-2.5">
-                    WITH EARLY SUPPORT FROM
-                  </span>
-                  <div className="flex flex-wrap items-center gap-4">
-                    <div className="h-[24px] w-[120px] flex items-center justify-center">
+                
+                  <div className="flex items-center gap-2 w-full">
+                    <div className="h-[24px] flex-1 flex items-center justify-center min-w-0">
                       <Image
                         src="/infinite-icon.svg"
                         alt="Infinite Field"
                         width={120}
                         height={24}
-                        className="w-full h-full object-contain"
+                        className="max-w-full h-full object-contain"
                       />
                     </div>
-                    <div className="h-[24px] w-[63px] flex items-center justify-center">
+                    <div className="h-[24px] flex-1 flex items-center justify-center min-w-0">
                       <Image
                         src="/kiln-icon.svg"
                         alt="Kiln"
                         width={63}
                         height={24}
-                        className="w-full h-full object-contain"
+                        className="max-w-full h-full object-contain"
                       />
                     </div>
-                    <div className="h-[25px] w-[156px] flex items-center justify-center">
+                    <div className="h-[25px] flex-1 flex items-center justify-center min-w-0">
                       <Image
                         src="/binance-icon.svg"
                         alt="Binance.US"
                         width={156}
                         height={25}
-                        className="w-full h-full object-contain"
+                        className="max-w-full h-full object-contain"
                       />
                     </div>
                   </div>

@@ -7,50 +7,51 @@ import Image from 'next/image';
 const roadmapCards = [
   {
     id: 1,
-    title: "Advanced Trading",
-    description: "Pro-grade tools and analytics",
-    pill: "Q1 2024",
-    backgroundImage: "/learn-card1.svg"
-  },
-  {
-    id: 2,
-    title: "Yield Products",
-    description: "Maximize your returns",
+    title: "Trade",
+    description: "Spot and perp markets with up to 40x leverage.",
     pill: "Q2 2024",
     backgroundImage: "/learn-card2.svg"
   },
   {
-    id: 3,
-    title: "Spending Solutions",
-    description: "Seamless crypto payments",
-    pill: "Q3 2024",
-    backgroundImage: "/learn-card3.svg"
-  },
-  {
-    id: 4,
-    title: "Borrowing Features",
-    description: "Access instant liquidity",
-    pill: "Q4 2024",
-    backgroundImage: "/learn-card4.svg"
-  },
-  {
-    id: 5,
-    title: "DeFi Integration",
-    description: "Connect to leading protocols",
-    pill: "Q1 2025",
-    backgroundImage: "/learn-card5.svg"
-  },
-  {
-    id: 6,
-    title: "Global Expansion",
-    description: "Worldwide accessibility",
+    id: 2,
+    title: "Deposit",
+    description: "Fund your account instantly with card, bank transfers, and more.",
     pill: "Q2 2025",
     backgroundImage: "/learn-card6.svg"
   },
   {
+    id: 3,
+    title: "Explore",
+    description: "Browse and connect to emerging dApps with your Dexari account.",
+    pill: "Q4 2024",
+    backgroundImage: "/learn-card4.svg"
+  },
+  {
+    id: 4,
+    title: "Invest",
+    description: "Discover and buy new cryptos early using DCA and TP/SL strategies.",
+    pill: "Q1 2025",
+    backgroundImage: "/learn-card5.svg"
+  },
+  {
+    id: 5,
+    title: "Earn",
+    description: "Put idle assets to work with auto-compounding cash and crypto yield.",
+    pill: "Q3 2024",
+    backgroundImage: "/learn-card3.svg"
+  },
+  {
+    id: 6,
+    title: "Borrow",
+    description: "Use crypto collateral to borrow cash instantly.",
+    pill: "Q1 2024",
+    backgroundImage: "/learn-card1.svg"
+  },
+
+  {
     id: 7,
-    title: "AI Trading",
-    description: "Smart automated strategies",
+    title: "Spend",
+    description: "Use your Dexari credit card to spend self-custodied funds anywhere.",
     pill: "Q3 2025",
     backgroundImage: "/learn-card7.svg"
   }
@@ -244,7 +245,7 @@ export default function RoadmapSection() {
             {/* Description */}
             <div className="lg:max-w-[476px]">
               <p className="text-[#969799] text-base lg:text-[17px] font-['Inter'] font-semibold leading-relaxed">
-                See what's launching next as Dexari expands into yield, spending, borrowing, and onchain apps. Built for traders who want power in their pocket.
+                See what&apos;s launching next as Dexari expands into yield, spending, borrowing, and onchain apps. Built for traders who want power in their pocket.
               </p>
             </div>
           </div>

@@ -10,59 +10,66 @@ interface NavbarProps {
 export default function Navbar({ isBannerVisible }: NavbarProps) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isNavbarVisible, setIsNavbarVisible] = useState(true);
-  const [lastScrollY, setLastScrollY] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
 
+  // Track screen size for mobile detection
   useEffect(() => {
-    let lastScrollYRef = 0;
-    let isVisibleRef = true;
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 1280); // xl breakpoint
+    };
+    
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
+  // Only apply scroll behavior on mobile
+  useEffect(() => {
+    if (!isMobile) {
+      // On desktop, always keep navbar visible
+      setIsNavbarVisible(true);
+      return;
+    }
+
+    let lastScrollY = 0;
     
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
       
       // Show navbar when at the top of the page
       if (currentScrollY < 10) {
-        if (!isVisibleRef) {
-          setIsNavbarVisible(true);
-          isVisibleRef = true;
-        }
+        setIsNavbarVisible(true);
       }
-      // Hide when scrolling down, show when scrolling up
-      else if (currentScrollY > lastScrollYRef && currentScrollY > 100) {
+      // Hide when scrolling down, show when scrolling up (only on mobile)
+      else if (currentScrollY > lastScrollY && currentScrollY > 100) {
         // Scrolling down - hide navbar
-        if (isVisibleRef) {
-          setIsNavbarVisible(false);
-          isVisibleRef = false;
-        }
-      } else if (currentScrollY < lastScrollYRef) {
+        setIsNavbarVisible(false);
+      } else if (currentScrollY < lastScrollY) {
         // Scrolling up - show navbar
-        if (!isVisibleRef) {
-          setIsNavbarVisible(true);
-          isVisibleRef = true;
-        }
+        setIsNavbarVisible(true);
       }
       
-      lastScrollYRef = currentScrollY;
+      lastScrollY = currentScrollY;
     };
 
-    // Add scroll event listener
     window.addEventListener('scroll', handleScroll, { passive: true });
     
-    // Cleanup
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [isMobile]);
 
   return (
     <>
       {/* Navigation */}
       <nav 
-        className={`nav-animate fixed left-0 z-40 w-full bg-[#202022]/95 backdrop-blur-sm lg:bg-[#202022]/95 transition-all duration-300 ${
-          isBannerVisible ? 'top-[58px] lg:top-[77px]' : 'top-0 lg:top-[19px]'
+        className={`nav-animate fixed left-0 z-40 w-full bg-[#202022] transition-all duration-300 ${
+          isBannerVisible ? 'top-[58px]' : 'top-0'
         }`}
         style={{
-          transform: isNavbarVisible ? 'translateY(0)' : 'translateY(-100%)'
+          transform: isMobile && !isNavbarVisible ? 'translateY(-100%)' : 'translateY(0)'
         }}
       >
-        <div className="w-full px-4 sm:px-8 md:px-16 lg:px-24 xl:px-[120px] py-6 lg:py-2 xl:py-0 lg:h-[60px] xl:h-[88px]">
+        <div className="w-full px-4 sm:px-8 md:px-16 lg:px-24 xl:px-[120px] py-4 lg:py-4 xl:py-6 lg:h-[60px] xl:h-[88px]">
           {/* Mobile/Tablet Layout - justify-between */}
           <div className="xl:hidden flex justify-between items-center w-full">
             {/* Logo */}

@@ -10,8 +10,8 @@ export default function PartnersSection() {
           {/* Mobile Layout */}
           <div className="lg:hidden">
             {/* Powered by and Secured by - Mobile */}
-            <div className="flex flex-col gap-6 mb-8">
-              <div className="flex flex-col gap-2">
+            <div className="flex flex-row gap-8 mb-8 items-start">
+              <div className="flex flex-col gap-2 items-start">
                 <p className="text-white text-base font-['Avenir_Next'] font-medium tracking-[0.1px]">
                   Powered by:
                 </p>
@@ -20,10 +20,10 @@ export default function PartnersSection() {
                   alt="Hyperliquid" 
                   width={186}
                   height={42}
-                  className="h-8 w-auto"
+                  className="h-7 w-auto"
                 />
               </div>
-              <div className="flex flex-col gap-2">
+              <div className="flex flex-col gap-2 items-start">
                 <p className="text-white text-base font-['Avenir_Next'] font-medium tracking-[0.1px]">
                   Secured by:
                 </p>
@@ -38,55 +38,58 @@ export default function PartnersSection() {
             </div>
             
             {/* Partner Logos - Mobile Grid */}
-            <div className="grid grid-cols-3 gap-4 items-center justify-items-center mb-6">
-              <Image 
-                src="/hero-logo1.svg" 
-                alt="Partner Logo" 
-                width={137}
-                height={18}
-                className="h-4 w-auto opacity-70 hover:opacity-100 transition-opacity duration-300"
-              />
-              <Image 
-                src="/hero-logo2.svg" 
-                alt="Partner Logo" 
-                width={101}
-                height={18}
-                className="h-4 w-auto opacity-70 hover:opacity-100 transition-opacity duration-300"
-              />
-              <Image 
-                src="/hero-logo3.svg" 
-                alt="Partner Logo" 
-                width={87}
-                height={21}
-                className="h-4 w-auto opacity-70 hover:opacity-100 transition-opacity duration-300"
-              />
-              <Image 
-                src="/hero-logo4.svg" 
-                alt="Partner Logo" 
-                width={99}
-                height={21}
-                className="h-4 w-auto opacity-70 hover:opacity-100 transition-opacity duration-300"
-              />
-              <Image 
-                src="/hero-logo5.svg" 
-                alt="Partner Logo" 
-                width={110}
-                height={21}
-                className="h-4 w-auto opacity-70 hover:opacity-100 transition-opacity duration-300"
-              />
-              <Image 
-                src="/hero-logo6.svg" 
-                alt="Partner Logo" 
-                width={70}
-                height={21}
-                className="h-4 w-auto opacity-70 hover:opacity-100 transition-opacity duration-300"
-              />
+            <div className="flex flex-col gap-6 ">
+              {/* First Row */}
+              <div className="grid grid-cols-3 gap-4 items-center justify-items-center">
+                <Image 
+                  src="/hero-logo1.svg" 
+                  alt="Partner Logo" 
+                  width={137}
+                  height={18}
+                  className="h-4 w-auto opacity-70 hover:opacity-100 transition-opacity duration-300"
+                />
+                <Image 
+                  src="/hero-logo2.svg" 
+                  alt="Partner Logo" 
+                  width={101}
+                  height={18}
+                  className="h-4 w-auto opacity-70 hover:opacity-100 transition-opacity duration-300"
+                />
+                <Image 
+                  src="/hero-logo3.svg" 
+                  alt="Partner Logo" 
+                  width={87}
+                  height={21}
+                  className="h-4 w-auto opacity-70 hover:opacity-100 transition-opacity duration-300"
+                />
+              </div>
+              {/* Second Row */}
+              <div className="grid grid-cols-3 gap-4 items-center justify-items-center">
+                <Image 
+                  src="/hero-logo4.svg" 
+                  alt="Partner Logo" 
+                  width={99}
+                  height={21}
+                  className="h-4 w-auto opacity-70 hover:opacity-100 transition-opacity duration-300"
+                />
+                <Image 
+                  src="/hero-logo5.svg" 
+                  alt="Partner Logo" 
+                  width={110}
+                  height={21}
+                  className="h-4 w-auto opacity-70 hover:opacity-100 transition-opacity duration-300"
+                />
+                <Image 
+                  src="/hero-logo6.svg" 
+                  alt="Partner Logo" 
+                  width={70}
+                  height={21}
+                  className="h-4 w-auto opacity-70 hover:opacity-100 transition-opacity duration-300"
+                />
+              </div>
             </div>
             
-            {/* More integrations text - Mobile */}
-            <p className="text-[rgba(255,255,255,0.7)] text-sm font-['Avenir_Next'] font-medium tracking-[0.1px] text-center">
-              + more integrations coming soon
-            </p>
+         
           </div>
 
           {/* Desktop Layout */}
@@ -170,11 +173,7 @@ export default function PartnersSection() {
                   />
                 </div>
               </div>
-              <div className="mt-6">
-                <p className="text-[rgba(255,255,255,0.7)] text-sm font-['Avenir_Next'] font-medium tracking-[0.1px] text-right">
-                  + more integrations coming soon
-                </p>
-              </div>
+             
             </div>
           </div>
         </div>
