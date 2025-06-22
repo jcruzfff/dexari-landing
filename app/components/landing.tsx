@@ -27,10 +27,10 @@ export default function Landing() {
         { y: 0, opacity: 1, duration: 0.8, ease: 'power2.out' }
       );
 
-      // Navigation animation
+      // Navigation animation - just fade in without movement
       gsap.fromTo('.nav-animate', 
-        { y: -30, opacity: 0 }, 
-        { y: 0, opacity: 1, duration: 0.6, delay: 0.2, ease: 'power2.out' }
+        { opacity: 0 }, 
+        { opacity: 1, duration: 0.6, delay: 0.2, ease: 'power2.out' }
       );
 
       // Hero content animation with stagger

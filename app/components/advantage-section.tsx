@@ -35,7 +35,7 @@ const advantages = [
 
 export default function AdvantageSection() {
   return (
-    <section className="relative w-full py-16 lg:py-24 bg-[#202022] overflow-hidden">
+    <section id="advantage" className="relative w-full py-16 lg:py-24 bg-[#202022] overflow-hidden">
       {/* Desktop Background - Only show on xl screens and above */}
       <div className="hidden xl:block absolute inset-0 items-center justify-center" style={{ paddingTop: '120px' }}>
         <div className="relative w-[85%] h-[800px] xl:h-[900px] mx-auto">
@@ -56,9 +56,9 @@ export default function AdvantageSection() {
         </h2>
         
         {/* Learn More Button */}
-        <button className="bg-[#e5dbb7] text-[#202022] px-8 py-3 rounded-full font-['Avenir_Next'] font-semibold text-base hover:bg-[#ddd0a3] transition-colors duration-200">
+        <a href="/docs" className="inline-block bg-[#e5dbb7] text-[#202022] px-8 py-3 rounded-full font-['Avenir_Next'] font-semibold text-base hover:bg-[#ddd0a3] transition-colors duration-200">
           Learn more
-        </button>
+        </a>
       </div>
 
       {/* Mobile Image - Show as section element on screens below xl */}

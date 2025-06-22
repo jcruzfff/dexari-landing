@@ -2,7 +2,7 @@
 
 export default function FeatureSection() {
   return (
-    <section className="relative w-full py-16 lg:py-24 bg-[#202022]">
+    <section id="features" className="relative w-full py-16 lg:py-24 bg-[#202022]">
       <div className="w-full px-4 sm:px-8 md:px-16 lg:px-24 xl:px-[120px]">
         {/* Header Container */}
         <div className="flex flex-col items-center justify-center text-center mb-12 lg:mb-16">
@@ -11,7 +11,7 @@ export default function FeatureSection() {
               Pro-grade mobile trading. All onchain.
             </h2>
             <p className="text-[#888888] text-base sm:text-lg xl:text-[18px] max-w-[698px] mx-auto font-['Avenir_Next'] leading-relaxed">
-              Dexari gives you the speed, depth, and precision of a top-tier platform. Self-custodial by design and powered by Hyperliquid's high-performance order book.
+              Dexari gives you the speed, depth, and precision of a top-tier platform. Self-custodial by design and powered by Hyperliquid&apos;s high-performance order book.
             </p>
           </div>
         </div>
@@ -19,32 +19,66 @@ export default function FeatureSection() {
         {/* Content Container */}
         <div className="max-w-[1224px] mx-auto space-y-4">
           {/* Deep Liquidity Card */}
-          <div className="bg-[#2b2b2b] rounded-[24px] lg:rounded-[36px] p-6 lg:p-12 overflow-hidden">
-            <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
-              <div className="flex-1 max-w-[530px]">
-                <div className="space-y-4">
-                  <div className="space-y-2.5">
-                    <p className="text-[#ffffff] text-sm lg:text-[18px] font-['Avenir_Next'] font-medium tracking-[1.5px] uppercase leading-5">
-                      deep Liquidity
-                    </p>
-                    <h3 className="text-[#ffffff] text-xl sm:text-2xl lg:text-[34px] font-['Avenir_Next'] font-medium leading-tight">
-                      200+ markets. Up to 40x leverage
-                    </h3>
-                  </div>
-                  <p className="text-[#888888] text-base lg:text-[18px] font-['Avenir_Next'] font-medium leading-relaxed max-w-[453px]">
-                    Access deep spot and perp liquidity with tight spreads and strong book depth, even during high volatility. Powered by Hyperliquid with $1.5T+ traded.
-                  </p>
+          <div className="bg-[#2b2b2b] rounded-[24px] overflow-hidden [@media(min-width:1080px)]:rounded-[36px] [@media(min-width:1080px)]:flex [@media(min-width:1080px)]:min-h-[264px]">
+            {/* Text Content Container */}
+            <div className="p-6 space-y-4 [@media(min-width:1080px)]:flex-1 [@media(min-width:1080px)]:p-[48px] [@media(min-width:1080px)]:pr-[20px] [@media(min-width:1080px)]:space-y-6 [@media(min-width:1080px)]:flex [@media(min-width:1080px)]:flex-col [@media(min-width:1080px)]:justify-start">
+              {/* deep Liquidity label */}
+              <p className="text-[#ffffff] text-sm font-['Avenir_Next'] font-medium tracking-[1.5px] uppercase leading-5 [@media(min-width:1080px)]:text-[18px]">
+                deep Liquidity
+              </p>
+              
+              {/* Main heading */}
+              <h3 className="text-[#ffffff] text-xl sm:text-2xl font-['Avenir_Next'] font-medium leading-tight [@media(min-width:1080px)]:text-[34px] [@media(min-width:1080px)]:leading-[42px]">
+                200+ markets. Up to 40x leverage
+              </h3>
+              
+              {/* Description */}
+              <p className="text-[#888888] text-sm font-['Avenir_Next'] font-medium leading-relaxed [@media(min-width:1080px)]:text-[18px]">
+                Access deep spot and perp liquidity with tight spreads and strong book depth, even during high volatility. Powered by Hyperliquid with $1.5T+ traded.
+              </p>
+            </div>
+            
+            {/* Video section */}
+            <div className="w-full [@media(min-width:1080px)]:w-[410px] [@media(min-width:1080px)]:self-stretch">
+              {/* Mobile: Flexbox approach */}
+              <div className="[@media(min-width:1080px)]:hidden flex-1 mx-6 lg:mx-12 mb-0 flex flex-col justify-end">
+                <div className="w-full h-auto bg-[#343434] rounded-t-[24px] lg:rounded-t-[35px] overflow-hidden flex items-end">
+                  <video
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    className="w-full h-auto object-contain"
+                  >
+                    <source src="/videos/half-liquidity.mov" type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
                 </div>
               </div>
-              <div className="bg-[#343434] h-[200px] lg:h-[264px] w-full lg:w-[407px] rounded-lg lg:rounded-none flex-shrink-0" />
+              
+              {/* Desktop: Bottom-aligned flexbox approach */}
+              <div className="hidden [@media(min-width:1080px)]:flex [@media(min-width:1080px)]:flex-col [@media(min-width:1080px)]:justify-end [@media(min-width:1080px)]:h-full [@media(min-width:1080px)]:bg-[#343434] [@media(min-width:1080px)]:pt-[33px] [@media(min-width:1080px)]:px-[36px]">
+                <div className="w-full flex-1 rounded-t-[20px] overflow-hidden flex items-end">
+                  <video
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    className="w-full h-auto object-contain"
+                  >
+                    <source src="/videos/half-liquidity.mov" type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
+              </div>
             </div>
           </div>
 
           {/* Two Column Cards */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
             {/* Fast Execution Card */}
-            <div className="bg-[#2b2b2b] rounded-[24px] lg:rounded-[36px] p-6 lg:p-12 flex flex-col justify-between min-h-[400px] lg:min-h-[665px]">
-              <div className="space-y-4 max-w-[508px]">
+            <div className="bg-[#2b2b2b] rounded-[24px] lg:rounded-[36px] overflow-hidden flex flex-col justify-between min-h-[400px] lg:min-h-[665px]">
+              <div className="p-6 lg:p-12 space-y-4 max-w-[508px]">
                 <div className="space-y-2.5 max-w-[408px]">
                   <p className="text-[#ffffff] text-sm lg:text-[18px] font-['Avenir_Next'] font-medium tracking-[1.5px] uppercase leading-5">
                     fast Execution
@@ -57,12 +91,25 @@ export default function FeatureSection() {
                   Trade with low latency, low fees, and zero gas. Supports market, limit, TP/SL, stop, TWAP, and scale strategies.
                 </p>
               </div>
-              <div className="bg-[#343434] h-[200px] lg:h-[416px] w-full rounded-t-[24px] lg:rounded-t-[35px] mt-8" />
+              <div className="flex-1 mb-0 flex flex-col justify-end">
+                <div className="w-full h-auto  bg-none overflow-hidden flex items-end">
+                  <video
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    className="w-full h-auto object-contain object-bottom "
+                  >
+                    <source src="/videos/dexari_long.mov" type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
+              </div>
             </div>
 
             {/* Advanced Tools Card */}
-            <div className="bg-[#2b2b2b] rounded-[24px] lg:rounded-[36px] p-6 lg:p-12 flex flex-col justify-between min-h-[400px] lg:min-h-[665px]">
-              <div className="space-y-4 lg:space-y-[22px] max-w-[508px]">
+            <div className="bg-[#2b2b2b] rounded-[24px] lg:rounded-[36px] overflow-hidden flex flex-col justify-between min-h-[400px] lg:min-h-[665px]">
+              <div className="p-6 lg:p-12 space-y-4 lg:space-y-[22px] max-w-[508px]">
                 <div className="space-y-2.5">
                   <p className="text-[#ffffff] text-sm lg:text-[18px] font-['Avenir_Next'] font-medium tracking-[1.5px] uppercase leading-5">
                     advanced Tools
@@ -72,32 +119,58 @@ export default function FeatureSection() {
                   </h3>
                 </div>
                 <p className="text-[#888888] text-base lg:text-[18px] font-['Avenir_Next'] font-medium leading-relaxed">
-                  Execute your edge with TradingView's advanced charts and get real-time alerts for fills, margin usage and new listings.
+                  Execute your edge with TradingView&apos;s advanced charts and get real-time alerts for fills, margin usage and new listings.
                 </p>
               </div>
-              <div className="bg-[#343434] h-[200px] lg:h-[416px] w-full rounded-t-[24px] lg:rounded-t-[35px] mt-8" />
+              <div className="flex-1 mx-6 lg:mx-12 flex flex-col justify-end">
+                <div className="w-full h-auto bg-none rounded-t-[24px] lg:rounded-t-[35px] overflow-hidden flex items-end">
+                  <video
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    className="w-full h-auto object-contain"
+                  >
+                    <source src="/videos/trader-view.mov" type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
+              </div>
             </div>
           </div>
 
           {/* Zero Friction Card */}
-          <div className="bg-[#2b2b2b] rounded-[24px] lg:rounded-[36px] p-6 lg:p-12 overflow-hidden">
-            <div className="flex flex-col lg:flex-row gap-8">
-              <div className="flex-1 max-w-[566px]">
-                <div className="space-y-4">
-                  <div className="space-y-2.5">
-                    <p className="text-[#ffffff] text-sm lg:text-[18px] font-['Avenir_Next'] font-medium tracking-[1.5px] uppercase leading-5">
-                      zero friction
-                    </p>
-                    <h3 className="text-[#ffffff] text-xl sm:text-2xl lg:text-[34px] font-['Avenir_Next'] font-medium leading-tight">
-                      Fund easily. Move freely. Stay secure
-                    </h3>
-                  </div>
-                  <p className="text-[#888888] text-base lg:text-[18px] font-['Avenir_Next'] font-medium leading-relaxed max-w-[471px]">
-                    Deposit with card, bank, or crypto. Move funds between accounts without bridging steps. Stay self-custodial with MFA, secured by Turnkey.
-                  </p>
-                </div>
-              </div>
-              <div className="bg-[#18181a] h-[200px] lg:h-[357px] w-full lg:w-[499px] rounded-lg lg:rounded-none flex-shrink-0" />
+          <div className="bg-[#2b2b2b] rounded-[24px] w-full relative overflow-hidden [@media(min-width:1080px)]:rounded-[36px] [@media(min-width:1080px)]:min-h-[357px]">
+            {/* Text Content Container - Mobile: normal flow, Desktop: absolute positioning */}
+            <div className="p-6 space-y-4 [@media(min-width:1080px)]:absolute [@media(min-width:1080px)]:left-[48px] [@media(min-width:1080px)]:top-[50px] [@media(min-width:1080px)]:right-[520px] [@media(min-width:1080px)]:bottom-[50px] [@media(min-width:1080px)]:flex [@media(min-width:1080px)]:flex-col [@media(min-width:1080px)]:justify-start [@media(min-width:1080px)]:p-0 [@media(min-width:1080px)]:space-y-6 [@media(min-width:1080px)]:max-w-none">
+              {/* zero friction label */}
+              <p className="text-[#ffffff] text-sm font-['Avenir_Next'] font-medium tracking-[1.5px] uppercase leading-5 [@media(min-width:1080px)]:text-[18px]">
+                zero friction
+              </p>
+              
+              {/* Main heading */}
+              <h3 className="text-[#ffffff] text-xl sm:text-2xl font-['Avenir_Next'] font-medium leading-tight [@media(min-width:1080px)]:text-[34px] [@media(min-width:1080px)]:leading-[42px]">
+                Fund easily. Move freely. Stay secure.
+              </h3>
+              
+              {/* Description */}
+              <p className="text-[#888888] text-sm font-['Avenir_Next'] font-medium leading-relaxed [@media(min-width:1080px)]:text-[18px]">
+                Deposit with card, bank, or crypto. Move funds between accounts without bridging steps. Stay self-custodial with MFA, secured by Turnkey.
+              </p>
+            </div>
+            
+            {/* Video section - Mobile: full natural height, Desktop: fixed position on right */}
+            <div className="w-full [@media(min-width:1080px)]:absolute [@media(min-width:1080px)]:w-[499px] [@media(min-width:1080px)]:h-[357px] [@media(min-width:1080px)]:right-0 [@media(min-width:1080px)]:top-0">
+              <video
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="w-full h-auto [@media(min-width:1080px)]:h-full [@media(min-width:1080px)]:object-cover"
+              >
+                <source src="/videos/dexari-deposit.mov" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
             </div>
           </div>
         </div>

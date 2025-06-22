@@ -85,11 +85,7 @@ export default function RoadmapSection() {
     return screenCenter - cardCenter - edgeSpacing;
   };
   
-  // Start position should show the first set properly
-  const getInitialOffset = () => {
-    const baseOffset = roadmapCards.length * stepSize;
-    return isMobile ? baseOffset - getCenterOffset() : baseOffset;
-  };
+
   
   useEffect(() => {
     const handleResize = () => {
@@ -107,8 +103,19 @@ export default function RoadmapSection() {
   }, []);
   
   useEffect(() => {
-    setTranslateX(getInitialOffset());
-  }, [isMobile, stepSize]);
+    const baseOffset = roadmapCards.length * stepSize;
+    let centerOffset = 0;
+    
+    if (isMobile && typeof window !== 'undefined') {
+      const screenWidth = window.innerWidth;
+      const cardCenter = cardWidth / 2;
+      const screenCenter = screenWidth / 2;
+      centerOffset = screenCenter - cardCenter - edgeSpacing;
+    }
+    
+    const initialOffset = isMobile ? baseOffset - centerOffset : baseOffset;
+    setTranslateX(initialOffset);
+  }, [isMobile, stepSize, cardWidth, edgeSpacing]);
 
   // Snap to nearest card center
   const snapToNearest = (currentTranslateX: number) => {
@@ -230,7 +237,7 @@ export default function RoadmapSection() {
   };
 
   return (
-    <section className="relative w-full bg-[#202022]">
+    <section id="roadmap" className="relative w-full bg-[#202022]">
       {/* Header */}
       <div className="w-full px-4 sm:px-8 md:px-16 lg:px-24 xl:px-[120px] pt-12 md:pt-16 lg:pt-24">
         <div className="max-w-[1224px] mx-auto">

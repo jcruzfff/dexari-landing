@@ -68,12 +68,18 @@ export default function HeroSection({ isBannerVisible }: HeroSectionProps) {
 
           {/* Right Hero Image */}
           <div className="flex-shrink-0 w-full xl:w-auto max-w-[432px] xl:max-w-none">
-            <div className="bg-[#2b2b2b] rounded-[36px] h-[400px] sm:h-[500px] xl:h-[595px] w-full xl:w-[432px] flex items-center justify-center">
+            <div className="bg-[#2b2b2b] rounded-[36px] h-[624px] sm:h-[500px] xl:h-[595px] w-full flex items-center justify-center">
               {/* Placeholder for hero image/animation */}
-              <div className="text-white/50 text-center">
-                <p>Hero Image/Animation</p>
+              
+              <Image 
+                    src="/hero-image.png" 
+                    alt="dexari-hero-image" 
+                    width={422}
+                    height={624}
+                    className="h-full w-auto"
+                  />
               </div>
-              </div>
+              
             </div>
           </div>
         </div>

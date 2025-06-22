@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 export default function PartnersSection() {
   return (
-    <section className="footer-animate relative bg-[#2b2b2b] w-full mt-16 lg:mt-24 py-8 md:py-16">
+    <section className="relative bg-[#2b2b2b] w-full mt-24 mb-12 lg:mb-16 lg:mt-0 py-8 md:py-16">
       <div className="w-full px-4 sm:px-8 md:px-16 lg:px-24 xl:px-[120px]">
         <div className="max-w-[1224px] mx-auto">
           {/* Mobile Layout */}

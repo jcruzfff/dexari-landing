@@ -22,7 +22,7 @@ const backers = [
 
 export default function BackersSection() {
   return (
-    <section className="relative w-full py-16 lg:py-24 bg-[#202022]">
+    <section className="relative w-full py-24 mb-12 lg:mb-24 mt-6  bg-[#202022]">
       <div className="w-full px-4 sm:px-8 md:px-16 lg:px-24 xl:px-[120px]">
         <div className="max-w-[1224px] mx-auto">
           
@@ -99,7 +99,7 @@ export default function BackersSection() {
               </div>
 
               {/* Mobile Layout */}
-              <div className="lg:hidden">
+              <div className="lg:hidden mb-18">
                 {/* LED - Prelude */}
                 <div className="mb-6">
                 
