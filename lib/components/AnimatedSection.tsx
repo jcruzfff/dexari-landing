@@ -19,10 +19,10 @@ export const AnimatedSection = ({
   className = '',
 }: AnimatedSectionProps) => {
   // Animation refs
-  const titleRef = useEntranceAnimation('fadeIn', { delay: 0.2 });
-  const subtitleRef = useEntranceAnimation('fadeIn', { delay: 0.4 });
-  const contentRef = useStaggerAnimation('.animate-item', { delay: 0.6 });
-  const lottieRef = useScrollTrigger(
+  const titleRef = useEntranceAnimation<HTMLHeadingElement>('fadeIn', { delay: 0.2 });
+  const subtitleRef = useEntranceAnimation<HTMLParagraphElement>('fadeIn', { delay: 0.4 });
+  const contentRef = useStaggerAnimation<HTMLDivElement>('.animate-item', { delay: 0.6 });
+  const lottieRef = useScrollTrigger<HTMLDivElement>(
     { opacity: 0, scale: 0.8 },
     {
       start: 'top 60%',

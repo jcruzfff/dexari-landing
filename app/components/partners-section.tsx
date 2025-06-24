@@ -38,7 +38,7 @@ export default function PartnersSection() {
             </div>
             
             {/* Partner Logos - Mobile Grid */}
-            <div className="flex flex-col gap-6 ">
+            <div className="flex flex-col gap-6">
               {/* First Row */}
               <div className="grid grid-cols-3 gap-4 items-center justify-items-center">
                 <Image 
@@ -88,92 +88,98 @@ export default function PartnersSection() {
                 />
               </div>
             </div>
-            
-         
           </div>
 
-          {/* Desktop Layout */}
-          <div className="hidden lg:flex flex-row gap-[287px] items-start">
-            <div className="flex flex-row gap-[91px] items-start">
-              <div className="w-[186px]">
-                <div className="flex flex-col gap-2">
-                  <p className="text-white text-lg font-['Avenir_Next'] font-medium tracking-[0.1px]">
-                    Powered by:
-                  </p>
-                  <Image 
-                    src="/hyperliquid-logo.svg" 
-                    alt="Hyperliquid" 
-                    width={186}
-                    height={42}
-                    className="h-[42px] w-auto"
-                  />
-                </div>
+          {/* Desktop Layout - Responsive Grid */}
+          <div className="hidden lg:grid lg:grid-cols-2 xl:grid-cols-[1fr_auto] gap-8 xl:gap-16 items-start">
+            {/* Left Side - Powered by and Secured by */}
+            <div className="flex flex-col lg:flex-row gap-8 lg:gap-12">
+              <div className="flex flex-col gap-2">
+                <p className="text-white text-lg font-['Avenir_Next'] font-medium tracking-[0.1px]">
+                  Powered by:
+                </p>
+                <Image 
+                  src="/hyperliquid-logo.svg" 
+                  alt="Hyperliquid" 
+                  width={186}
+                  height={42}
+                  className="h-[36px] w-auto"
+                />
               </div>
-              <div className="w-[235px]">
-                <div className="flex flex-col gap-[9px]">
-                  <p className="text-white text-lg font-['Avenir_Next'] font-medium tracking-[0.1px]">
-                    Secured by:
-                  </p>
-                  <Image 
-                    src="/turnkey-logo.svg" 
-                    alt="Turnkey" 
-                    width={235}
-                    height={37}
-                    className="h-[37px] w-auto"
-                  />
-                </div>
+              <div className="flex flex-col gap-2">
+                <p className="text-white text-lg font-['Avenir_Next'] font-medium tracking-[0.1px]">
+                  Secured by:
+                </p>
+                <Image 
+                  src="/turnkey-logo.svg" 
+                  alt="Turnkey" 
+                  width={235}
+                  height={37}
+                  className="h-[37px] w-auto"
+                />
               </div>
             </div>
-            <div className="w-[422px]">
-              <div className="flex flex-col gap-6 items-end">
-                <div className="flex flex-row gap-12 items-center">
+            
+            {/* Right Side - Partner Logos */}
+            <div className="flex flex-col gap-6 lg:items-end xl:items-end">
+              <div className="flex flex-wrap gap-6 lg:gap-8 xl:gap-12 items-center justify-center lg:justify-end">
+                <div className="h-[21px] xl:h-[23px] flex items-center">
                   <Image 
                     src="/hero-logo1.svg" 
                     alt="Partner Logo" 
                     width={137}
-                    height={18}
-                    className="h-[18px] w-auto opacity-70 hover:opacity-100 transition-opacity duration-300"
+                    height={21}
+                    className="h-[21px]  xl:h-[23px] w-auto opacity-70 hover:opacity-100 transition-opacity duration-300"
                   />
+                </div>
+                <div className="h-[21px]  xl:h-[23px] flex items-center">
                   <Image 
                     src="/hero-logo2.svg" 
                     alt="Partner Logo" 
                     width={101}
-                    height={18}
-                    className="h-[18px] w-auto opacity-70 hover:opacity-100 transition-opacity duration-300"
+                    height={21}
+                    className="h-[21px]  xl:h-[23px] w-auto opacity-70 hover:opacity-100 transition-opacity duration-300"
                   />
+                </div>
+                <div className="h-[21px]  xl:h-[23px] flex items-center">
                   <Image 
                     src="/hero-logo3.svg" 
                     alt="Partner Logo" 
                     width={87}
                     height={21}
-                    className="h-[21px] w-auto opacity-70 hover:opacity-100 transition-opacity duration-300"
+                    className="h-[21px] xl:h-[23px] w-auto opacity-70 hover:opacity-100 transition-opacity duration-300"
                   />
                 </div>
-                <div className="flex flex-row gap-[62px] items-end">
+              </div>
+              <div className="flex flex-wrap gap-6 lg:gap-8 xl:gap-12 items-center justify-center lg:justify-end">
+                <div className="h-[21px]  xl:h-[23px] flex items-center">
                   <Image 
                     src="/hero-logo4.svg" 
                     alt="Partner Logo" 
                     width={99}
                     height={21}
-                    className="h-[21px] w-auto opacity-70 hover:opacity-100 transition-opacity duration-300"
+                    className="h-[21px]  xl:h-[23px] w-auto opacity-70 hover:opacity-100 transition-opacity duration-300"
                   />
+                </div>
+                <div className="h-[21px]  xl:h-[23px] flex items-center">
                   <Image 
                     src="/hero-logo5.svg" 
                     alt="Partner Logo" 
                     width={110}
                     height={21}
-                    className="h-[21px] w-auto opacity-70 hover:opacity-100 transition-opacity duration-300"
+                    className="h-[21px]  xl:h-[23px] w-auto opacity-70 hover:opacity-100 transition-opacity duration-300"
                   />
+                </div>
+                <div className="h-[21px]  xl:h-[23px] flex items-center">
                   <Image 
                     src="/hero-logo6.svg" 
                     alt="Partner Logo" 
                     width={70}
                     height={21}
-                    className="h-[21px] w-auto opacity-70 hover:opacity-100 transition-opacity duration-300"
+                    className="h-[21px]  xl:h-[23px] w-auto opacity-70 hover:opacity-100 transition-opacity duration-300"
                   />
                 </div>
               </div>
-             
             </div>
           </div>
         </div>

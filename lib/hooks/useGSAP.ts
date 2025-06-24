@@ -13,11 +13,11 @@ if (typeof window !== 'undefined') {
 }
 
 // Hook for GSAP animations
-export const useGSAP = (
+export const useGSAP = <T extends HTMLElement = HTMLElement>(
   callback: (context: { timeline: gsap.core.Timeline; selector: (selector: string) => Element[] }) => void,
-  dependencies: any[] = []
+  dependencies: unknown[] = []
 ) => {
-  const ref = useRef<HTMLElement>(null);
+  const ref = useRef<T>(null);
 
   useIsomorphicLayoutEffect(() => {
     if (!ref.current) return;
@@ -37,12 +37,12 @@ export const useGSAP = (
 };
 
 // Hook for scroll-triggered animations
-export const useScrollTrigger = (
+export const useScrollTrigger = <T extends HTMLElement = HTMLElement>(
   animation: gsap.TweenVars,
   triggerOptions?: ScrollTrigger.Vars,
-  dependencies: any[] = []
+  dependencies: unknown[] = []
 ) => {
-  const ref = useRef<HTMLElement>(null);
+  const ref = useRef<T>(null);
 
   useIsomorphicLayoutEffect(() => {
     if (!ref.current) return;
@@ -67,12 +67,12 @@ export const useScrollTrigger = (
 };
 
 // Hook for entrance animations
-export const useEntranceAnimation = (
+export const useEntranceAnimation = <T extends HTMLElement = HTMLElement>(
   type: 'fadeIn' | 'slideUp' | 'slideLeft' | 'slideRight' | 'scaleIn' = 'fadeIn',
   options?: gsap.TweenVars,
-  dependencies: any[] = []
+  dependencies: unknown[] = []
 ) => {
-  const ref = useRef<HTMLElement>(null);
+  const ref = useRef<T>(null);
 
   useIsomorphicLayoutEffect(() => {
     if (!ref.current) return;
@@ -108,12 +108,12 @@ export const useEntranceAnimation = (
 };
 
 // Hook for stagger animations
-export const useStaggerAnimation = (
+export const useStaggerAnimation = <T extends HTMLElement = HTMLElement>(
   childSelector: string = '.stagger-item',
   animation?: gsap.TweenVars,
-  dependencies: any[] = []
+  dependencies: unknown[] = []
 ) => {
-  const ref = useRef<HTMLElement>(null);
+  const ref = useRef<T>(null);
 
   useIsomorphicLayoutEffect(() => {
     if (!ref.current) return;
@@ -142,12 +142,12 @@ export const useStaggerAnimation = (
 };
 
 // Hook for hover animations
-export const useHoverAnimation = (
+export const useHoverAnimation = <T extends HTMLElement = HTMLElement>(
   hoverIn?: gsap.TweenVars,
   hoverOut?: gsap.TweenVars,
-  dependencies: any[] = []
+  dependencies: unknown[] = []
 ) => {
-  const ref = useRef<HTMLElement>(null);
+  const ref = useRef<T>(null);
 
   useIsomorphicLayoutEffect(() => {
     if (!ref.current) return;

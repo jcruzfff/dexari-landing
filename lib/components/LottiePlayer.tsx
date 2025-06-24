@@ -39,9 +39,7 @@ export const LottiePlayer = ({
       loop,
       canvas: canvasRef.current,
       src,
-      playbackSettings: {
-        speed,
-      },
+      speed,
     });
 
     dotLottieRef.current = dotLottie;
@@ -56,7 +54,7 @@ export const LottiePlayer = ({
     }
 
     if (onError) {
-      dotLottie.addEventListener('loadError', (event) => {
+      dotLottie.addEventListener('loadError', () => {
         onError(new Error('Failed to load Lottie animation'));
       });
     }
@@ -66,12 +64,6 @@ export const LottiePlayer = ({
       dotLottie.destroy();
     };
   }, [src, autoplay, loop, speed, onLoad, onComplete, onError]);
-
-  // Control methods
-  const play = () => dotLottieRef.current?.play();
-  const pause = () => dotLottieRef.current?.pause();
-  const stop = () => dotLottieRef.current?.stop();
-  const setSpeed = (newSpeed: number) => dotLottieRef.current?.setSpeed(newSpeed);
 
   return (
     <div 
@@ -87,7 +79,7 @@ export const LottiePlayer = ({
 };
 
 // Hook for controlling Lottie animations
-export const useLottieControls = (playerRef: React.RefObject<any>) => {
+export const useLottieControls = (playerRef: React.RefObject<{ play: () => void; pause: () => void; stop: () => void; setSpeed: (speed: number) => void }>) => {
   const play = () => playerRef.current?.play();
   const pause = () => playerRef.current?.pause();
   const stop = () => playerRef.current?.stop();
