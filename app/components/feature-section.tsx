@@ -82,7 +82,7 @@ export default function FeatureSection() {
               </h3>
               
               {/* Description */}
-              <p className="text-[#ffffffbd] text-[18px] font-['Avenir_Next'] font-medium leading-relaxed [@media(min-width:1080px)]:text-[18px]">
+              <p className="text-[#ffffffbd] text-base lg:text-[18px] font-['Avenir_Next'] font-medium leading-relaxed [@media(min-width:1080px)]:text-[18px]">
                 Access deep spot and perp liquidity with tight spreads and strong book depth, even during high volatility. Powered by Hyperliquid with $1.5T+ traded.
               </p>
             </div>
@@ -205,7 +205,7 @@ export default function FeatureSection() {
               </h3>
               
               {/* Description */}
-              <p className="text-[#ffffffbd] text-sm font-['Avenir_Next'] font-medium leading-relaxed [@media(min-width:1080px)]:text-[18px]">
+              <p className="text-[#ffffffbd] text-base lg:text-[18px] font-['Avenir_Next'] font-medium leading-relaxed [@media(min-width:1080px)]:text-[18px]">
                 Deposit with card, bank, or crypto. Move funds between accounts without bridging steps. Stay self-custodial with MFA, secured by Turnkey.
               </p>
             </div>

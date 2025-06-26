@@ -155,7 +155,7 @@ export default function AdvantageSection() {
                     <h3 className="text-white text-[34px] font-['Avenir_Next'] font-medium leading-[42px] mb-6">
                       {advantages[0].title}
                     </h3>
-                    <p className="text-[#ffffffbd] text-[18px] font-['Avenir_Next'] leading-[24px] font-medium">
+                    <p className="text-[#ffffffbd] text-base lg:text-[18px] font-['Avenir_Next'] leading-[24px] font-medium">
                       {advantages[0].description}
                     </p>
                   </div>
@@ -198,7 +198,7 @@ export default function AdvantageSection() {
                     <h3 className="text-white text-[34px] font-['Avenir_Next'] font-medium leading-[42px] mb-6">
                       {advantages[1].title}
                     </h3>
-                    <p className="text-[#ffffffbd] text-[18px] font-['Avenir_Next'] leading-[24px] font-medium">
+                    <p className="text-[#ffffffbd] text-base lg:text-[18px] font-['Avenir_Next'] leading-[24px] font-medium">
                       {advantages[1].description}
                     </p>
                   </div>
@@ -241,7 +241,7 @@ export default function AdvantageSection() {
                     <h3 className="text-white text-[34px] font-['Avenir_Next'] font-medium leading-[42px] mb-6">
                       {advantages[2].title}
                     </h3>
-                    <p className="text-[#ffffffbd] text-[18px] font-['Avenir_Next'] leading-[24px] font-medium">
+                    <p className="text-[#ffffffbd] text-base lg:text-[18px]font-['Avenir_Next'] leading-[24px] font-medium">
                       {advantages[2].description}
                     </p>
                   </div>
@@ -284,7 +284,7 @@ export default function AdvantageSection() {
                     <h3 className="text-white text-[34px] font-['Avenir_Next'] font-medium leading-[42px] mb-6">
                       {advantages[3].title}
                     </h3>
-                    <p className="text-[#ffffffbd] text-[18px] font-['Avenir_Next'] leading-[24px]  font-medium">
+                    <p className="text-[#ffffffbd] text-base lg:text-[18px] font-['Avenir_Next'] leading-[24px]  font-medium">
                       {advantages[3].description}
                     </p>
                   </div>
@@ -321,7 +321,7 @@ export default function AdvantageSection() {
                     <h3 className="text-white text-xl sm:text-2xl lg:text-[34px] font-['Avenir_Next'] font-medium leading-tight lg:leading-[42px]">
                       {advantage.title}
                     </h3>
-                    <p className="text-[#ffffffbd] text-sm sm:text-base lg:text-[18px] font-['Avenir_Next'] leading-relaxed lg:leading-[24px] max-w-[480px]">
+                    <p className="text-[#ffffffbd] text-base lg:text-[18px] font-['Avenir_Next'] font-medium leading-relaxed lg:leading-[24px] max-w-[480px]">
                       {advantage.description}
                     </p>
                   </div>

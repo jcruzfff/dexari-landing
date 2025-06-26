@@ -94,7 +94,8 @@ export default function FooterSection() {
             <div className="w-full h-px bg-[#333333] mb-6" />
             
             {/* Powered by and Secured by */}
-            <div className="flex flex-row justify-center items-center gap-6 mb-6">
+            {/* 380px+ screens: Horizontal layout */}
+            <div className="hidden [@media(min-width:380px)]:flex [@media(min-width:380px)]:flex-row justify-center items-center gap-6 mb-6 lg:hidden">
               <div className="flex items-center gap-2.5">
                 <span className="text-[#ffffffbd] text-xs font-normal font-['Avenir_Next']">
                   Powered by
@@ -117,6 +118,36 @@ export default function FooterSection() {
                   width={91}
                   height={19}
                   className="h-[19px] w-auto"
+                  quality={100}
+                />
+              </div>
+            </div>
+            
+            {/* Under 380px: Stacked layout (title above logo, but sections side by side) */}
+            <div className="[@media(min-width:380px)]:hidden flex flex-row justify-center items-center gap-6 mb-6 lg:hidden">
+              <div className="flex flex-col items-center gap-1">
+                <span className="text-[#ffffffbd] text-xs font-normal font-['Avenir_Next']">
+                  Powered by
+                </span>
+                <Image 
+                  src="/hyperliquid-logo.svg" 
+                  alt="Hyperliquid" 
+                  width={95}
+                  height={18}
+                  className="h-3.5 w-auto"
+                />
+              </div>
+              <div className="flex flex-col items-center gap-1">
+                <span className="text-[#ffffffbd] text-xs font-normal font-['Avenir_Next']">
+                  Secured by
+                </span>
+                <Image 
+                  src="/turnkey-logo.svg" 
+                  alt="Turnkey" 
+                  width={91}
+                  height={16}
+                  className="h-[16px] w-auto"
+                  quality={100}
                 />
               </div>
             </div>
@@ -125,7 +156,8 @@ export default function FooterSection() {
             <div className="w-full h-px bg-[#333333] mb-6" />
             
             {/* Footer Links Mobile */}
-            <div className="flex flex-nowrap justify-center items-center gap-3 text-center overflow-x-auto">
+            {/* 380px+ screens: Single row layout */}
+            <div className="hidden [@media(min-width:380px)]:flex [@media(min-width:380px)]:flex-nowrap justify-center items-center gap-3 text-center overflow-x-auto lg:hidden">
               <a href="#" className="text-[#ffffffbd] text-xs font-normal font-['Avenir_Next'] hover:text-white transition-colors whitespace-nowrap">
                 Disclaimer
               </a>
@@ -141,6 +173,31 @@ export default function FooterSection() {
               <a href="#" className="text-[#ffffffbd] text-xs font-normal font-['Avenir_Next'] hover:text-white transition-colors whitespace-nowrap">
                 Fee Schedule
               </a>
+            </div>
+            
+            {/* Under 380px: Two-row layout (3 + 2) */}
+            <div className="[@media(min-width:380px)]:hidden flex flex-col justify-center items-center gap-3 text-center lg:hidden">
+              {/* First row: 3 links */}
+              <div className="flex justify-center items-center gap-3">
+                <a href="#" className="text-[#ffffffbd] text-xs font-normal font-['Avenir_Next'] hover:text-white transition-colors whitespace-nowrap">
+                  Disclaimer
+                </a>
+                <a href="#" className="text-[#ffffffbd] text-xs font-normal font-['Avenir_Next'] hover:text-white transition-colors whitespace-nowrap">
+                  Help
+                </a>
+                <a href="#" className="text-[#ffffffbd] text-xs font-normal font-['Avenir_Next'] hover:text-white transition-colors whitespace-nowrap">
+                  Privacy Policy
+                </a>
+              </div>
+              {/* Second row: 2 links */}
+              <div className="flex justify-center items-center gap-3">
+                <a href="#" className="text-[#ffffffbd] text-xs font-normal font-['Avenir_Next'] hover:text-white transition-colors whitespace-nowrap">
+                  Terms of Use
+                </a>
+                <a href="#" className="text-[#ffffffbd] text-xs font-normal font-['Avenir_Next'] hover:text-white transition-colors whitespace-nowrap">
+                  Fee Schedule
+                </a>
+              </div>
             </div>
           </div>
           
@@ -191,6 +248,7 @@ export default function FooterSection() {
                         width={91}
                         height={19}
                         className="h-[19px] w-auto"
+                        quality={100}
                       />
                     </div>
                   </div>

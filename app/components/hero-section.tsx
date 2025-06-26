@@ -140,6 +140,7 @@ export default function HeroSection() {
                     width={235}
                     height={37}
                     className="h-5 w-auto opacity-70 hover:opacity-100 transition-opacity duration-300"
+                    quality={100}
                   />
                 </div>
                 {/* Partner Logo 1 */}
@@ -234,6 +235,7 @@ export default function HeroSection() {
                       width={235}
                       height={37}
                       className="h-6 sm:h-7 md:h-8 lg:h-[37px] w-auto"
+                      quality={100}
                     />
                   </div>
                 </div>
