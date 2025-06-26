@@ -45,7 +45,7 @@ export default function HeroSection() {
                   <h1 ref={titleRef} className={`text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-[48px] leading-tight lg:leading-[72px] tracking-[0.1px] transition-all duration-700 ease-out ${titleVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
                     Lorem ipsum dolor sit amet
                   </h1>
-                  <p ref={subtitleRef} className={`text-base sm:text-lg md:text-xl lg:text-2xl xl:text-[24px] leading-relaxed lg:leading-normal max-w-full lg:max-w-[603px] text-gray-300 transition-all duration-700 ease-out ${subtitleVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+                  <p ref={subtitleRef} className={`text-base sm:text-lg md:text-xl lg:text-2xl xl:text-[24px] leading-relaxed lg:leading-normal max-w-full lg:max-w-[603px] text-[#ffffffbd] transition-all duration-700 ease-out ${subtitleVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                   </p>
                 </div>
@@ -119,38 +119,129 @@ export default function HeroSection() {
           <div className="w-full px-4 sm:px-8 md:px-16 lg:px-24 xl:px-[120px]">
             <div className="max-w-[1224px] mx-auto">
             {/* Unified Responsive Layout */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-[1fr_auto] gap-8 xl:gap-16 items-start">
-              {/* Left Side - Powered by and Secured by */}
-              <div className="flex flex-row gap-10 xs:gap-5 sm:gap-6 md:gap-8 lg:gap-12 items-center lg:items-start justify-center lg:justify-start mx-auto lg:mx-0">
-                <div className="flex flex-col gap-2 items-start lg:items-start">
-                  <p className="text-white text-base lg:text-lg font-['Avenir_Next'] font-medium tracking-[0.1px]">
-                    Powered by:
-                  </p>
+            {/* Mobile Only: Single unified 2-column grid with all 8 logos (no titles) */}
+            <div className="sm:hidden">
+              <div className="grid grid-cols-2 gap-x-4 gap-y-5 place-items-center max-w-xs mx-auto">
+                {/* Hyperliquid Logo */}
+                <div className="h-5 w-full flex items-center justify-center">
                   <Image 
                     src="/hyperliquid-logo.svg" 
                     alt="Hyperliquid" 
                     width={186}
                     height={42}
-                    className="h-5 xs:h-6 sm:h-7 md:h-8 lg:h-[42px] w-auto"
+                    className="h-5 w-auto opacity-70 hover:opacity-100 transition-opacity duration-300"
                   />
                 </div>
-                <div className="flex flex-col gap-2 items-start lg:items-start">
-                  <p className="text-white text-base lg:text-lg font-['Avenir_Next'] font-medium tracking-[0.1px]">
-                    Secured by:
-                  </p>
+                {/* Turnkey Logo */}
+                <div className="h-5 w-full flex items-center justify-center">
                   <Image 
                     src="/turnkey-logo.svg" 
                     alt="Turnkey" 
                     width={235}
                     height={37}
-                    className="h-5 xs:h-6 sm:h-7 md:h-8 lg:h-[37px] w-auto"
+                    className="h-5 w-auto opacity-70 hover:opacity-100 transition-opacity duration-300"
                   />
+                </div>
+                {/* Partner Logo 1 */}
+                <div className="h-5 w-full flex items-center justify-center">
+                  <Image 
+                    src="/hero-logo1.svg" 
+                    alt="Partner Logo" 
+                    width={137}
+                    height={21}
+                    className="h-5 w-auto opacity-70 hover:opacity-100 transition-opacity duration-300"
+                  />
+                </div>
+                {/* Partner Logo 2 */}
+                <div className="h-5 w-full flex items-center justify-center">
+                  <Image 
+                    src="/hero-logo2.svg" 
+                    alt="Partner Logo" 
+                    width={101}
+                    height={21}
+                    className="h-5 w-auto opacity-70 hover:opacity-100 transition-opacity duration-300"
+                  />
+                </div>
+                {/* Partner Logo 3 */}
+                <div className="h-5 w-full flex items-center justify-center">
+                  <Image 
+                    src="/hero-logo3.svg" 
+                    alt="Partner Logo" 
+                    width={87}
+                    height={21}
+                    className="h-5 w-auto opacity-70 hover:opacity-100 transition-opacity duration-300"
+                  />
+                </div>
+                {/* Partner Logo 4 */}
+                <div className="h-5 w-full flex items-center justify-center">
+                  <Image 
+                    src="/hero-logo4.svg" 
+                    alt="Partner Logo" 
+                    width={99}
+                    height={21}
+                    className="h-5 w-auto opacity-70 hover:opacity-100 transition-opacity duration-300"
+                  />
+                </div>
+                {/* Partner Logo 5 */}
+                <div className="h-5 w-full flex items-center justify-center">
+                  <Image 
+                    src="/hero-logo5.svg" 
+                    alt="Partner Logo" 
+                    width={110}
+                    height={21}
+                    className="h-5 w-auto opacity-70 hover:opacity-100 transition-opacity duration-300"
+                  />
+                </div>
+                {/* Partner Logo 6 */}
+                <div className="h-5 w-full flex items-center justify-center">
+                  <Image 
+                    src="/hero-logo6.svg" 
+                    alt="Partner Logo" 
+                    width={70}
+                    height={21}
+                    className="h-5 w-auto opacity-70 hover:opacity-100 transition-opacity duration-300"
+                  />
+                </div>
+              </div>
+            </div>
+
+            {/* Tablet/Desktop: Original layout with titles and separate sections (2 powered/secured + 3-3 partner rows) */}
+            <div className="hidden sm:grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-[1fr_auto] gap-12 lg:gap-12 xl:gap-16 items-start">
+              {/* Left Side - Powered by and Secured by */}
+              <div className="flex flex-row gap-16 sm:gap-20 md:gap-12 lg:gap-12 items-center lg:items-start justify-center lg:justify-start mx-auto lg:mx-0">
+                <div className="flex flex-col gap-4 sm:gap-5 md:gap-6 lg:gap-3 items-start lg:items-start">
+                  <p className="text-white text-base lg:text-lg font-['Avenir_Next'] font-medium tracking-[0.1px]">
+                    Powered by:
+                  </p>
+                  <div className="h-6 sm:h-7 md:h-8 lg:h-[42px] flex items-center">
+                    <Image 
+                      src="/hyperliquid-logo.svg" 
+                      alt="Hyperliquid" 
+                      width={186}
+                      height={42}
+                      className="h-6 sm:h-7 md:h-8 lg:h-[42px] w-auto"
+                    />
+                  </div>
+                </div>
+                <div className="flex flex-col gap-4 sm:gap-5 md:gap-6 lg:gap-3 items-start lg:items-start">
+                  <p className="text-white text-base lg:text-lg font-['Avenir_Next'] font-medium tracking-[0.1px]">
+                    Secured by:
+                  </p>
+                  <div className="h-6 sm:h-7 md:h-8 lg:h-[37px] flex items-center">
+                    <Image 
+                      src="/turnkey-logo.svg" 
+                      alt="Turnkey" 
+                      width={235}
+                      height={37}
+                      className="h-6 sm:h-7 md:h-8 lg:h-[37px] w-auto"
+                    />
+                  </div>
                 </div>
               </div>
               
               {/* Right Side - Partner Logos */}
-              <div className="flex flex-col gap-6 items-center lg:items-end xl:items-end">
-                <div className="flex gap-2 xs:gap-3 sm:gap-4 md:gap-6 lg:gap-6 [@media(min-width:1100px)]:gap-8 xl:gap-12 items-center justify-center lg:justify-end">
+              <div className="flex flex-col gap-8 sm:gap-10 md:gap-12 lg:gap-6 items-center lg:items-end xl:items-end">
+                <div className="flex gap-8 sm:gap-10 md:gap-12 lg:gap-6 [@media(min-width:1100px)]:gap-8 xl:gap-12 items-center justify-center lg:justify-end">
                   <div className="h-4 xs:h-5 sm:h-6 md:h-7 lg:h-[21px] xl:h-[23px] flex items-center">
                     <Image 
                       src="/hero-logo1.svg" 
@@ -179,7 +270,7 @@ export default function HeroSection() {
                     />
                   </div>
                 </div>
-                <div className="flex gap-2 xs:gap-3 sm:gap-4 md:gap-6 lg:gap-6 [@media(min-width:1100px)]:gap-8 xl:gap-12 items-center justify-center lg:justify-end">
+                <div className="flex gap-8 sm:gap-10 md:gap-12 lg:gap-6 [@media(min-width:1100px)]:gap-8 xl:gap-12 items-center justify-center lg:justify-end">
                   <div className="h-4 xs:h-5 sm:h-6 md:h-7 lg:h-[21px] xl:h-[23px] flex items-center">
                     <Image 
                       src="/hero-logo4.svg" 

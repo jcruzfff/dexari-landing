@@ -9,50 +9,50 @@ const roadmapCards = [
     id: 1,
     title: "Trade",
     description: "Spot and perp markets with up to 40x leverage.",
-    pill: "Q2 2024",
+    pill: "Live",
     backgroundImage: "/learn-card2.svg"
   },
   {
     id: 2,
     title: "Deposit",
     description: "Fund your account instantly with card, bank transfers, and more.",
-    pill: "Q2 2025",
+    pill: "Live",
     backgroundImage: "/learn-card6.svg"
   },
   {
     id: 3,
     title: "Explore",
     description: "Browse and connect to emerging dApps with your Dexari account.",
-    pill: "Q4 2024",
+    pill: "Q3 2025",
     backgroundImage: "/learn-card4.svg"
   },
   {
     id: 4,
     title: "Invest",
     description: "Discover and buy new cryptos early using DCA and TP/SL strategies.",
-    pill: "Q1 2025",
+    pill: "Q3 2025",
     backgroundImage: "/learn-card5.svg"
   },
   {
     id: 5,
-    title: "Earn",
-    description: "Put idle assets to work with auto-compounding cash and crypto yield.",
-    pill: "Q3 2024",
-    backgroundImage: "/learn-card3.svg"
+    title: "Borrow",
+    description: "Use crypto collateral to borrow cash instantly.",
+    pill: "Q4 2025",
+    backgroundImage: "/learn-card1.svg"
   },
   {
     id: 6,
-    title: "Borrow",
-    description: "Use crypto collateral to borrow cash instantly.",
-    pill: "Q1 2024",
-    backgroundImage: "/learn-card1.svg"
+    title: "Earn",
+    description: "Put idle assets to work with auto-compounding cash and crypto yield.",
+    pill: "Q4 2025",
+    backgroundImage: "/learn-card3.svg"
   },
 
   {
     id: 7,
     title: "Spend",
     description: "Use your Dexari credit card to spend self-custodied funds anywhere.",
-    pill: "Q3 2025",
+    pill: "Early 2026",
     backgroundImage: "/learn-card7.svg"
   }
 ];
@@ -250,8 +250,8 @@ export default function RoadmapSection() {
             </div>
             
             {/* Description */}
-            <div className="lg:max-w-[476px]">
-              <p className="text-[#969799] text-base lg:text-[17px] font-['Avenir_Next'] font-medium leading-relaxed">
+            <div className="lg:max-w-[486px]">
+              <p className="text-[#ffffffbd] text-base lg:text-[18px] font-['Avenir_Next'] font-medium leading-relaxed">
                 See what&apos;s launching next as Dexari expands into yield, spending, borrowing, and onchain apps. Built for traders who want power in their pocket.
               </p>
             </div>
@@ -259,102 +259,168 @@ export default function RoadmapSection() {
         </div>
       </div>
 
-      {/* Cards Container - Edge to Edge Infinite Loop */}
-      <div className="relative mb-12 md:mb-16" style={{ overflow: 'visible' }}>
-        <div className="overflow-hidden">
-          <div 
-            ref={carouselRef}
-            className="flex select-none"
-            style={{ 
-              transform: `translateX(-${translateX}px)`,
-              gap: `${cardGap}px`,
-              paddingTop: isMobile ? '8px' : '10px',
-              paddingBottom: isMobile ? '8px' : '10px',
-              marginLeft: `${edgeSpacing}px`,
-              transition: isTransitioning ? 'transform 300ms ease-out' : 'none',
-              cursor: isMobile && isDragging ? 'grabbing' : isMobile ? 'grab' : 'default'
-            }}
-            // Touch events with direction detection
-            onTouchStart={(e) => {
-              const touch = e.touches[0];
-              handleStart(touch.clientX, touch.clientY);
-            }}
-            onTouchMove={(e) => {
-              const touch = e.touches[0];
-              handleMove(touch.clientX, touch.clientY);
-              
-              // Only prevent default for horizontal scrolling
-              if (touchDirection === 'horizontal') {
-                e.preventDefault();
-              }
-            }}
-            onTouchEnd={handleEnd}
-            // Mouse events for testing on desktop
-            onMouseDown={(e) => {
-              if (isMobile) {
-                e.preventDefault();
-                handleStart(e.clientX, e.clientY);
-              }
-            }}
-            onMouseMove={(e) => {
-              if (isMobile) {
-                handleMove(e.clientX, e.clientY);
+      {/* Cards Container - Responsive Layout */}
+      <div className="relative mb-12 md:mb-16">
+        {/* Mobile: Edge to Edge */}
+        <div className="md:hidden" style={{ overflow: 'visible' }}>
+          <div className="overflow-hidden">
+            <div 
+              ref={carouselRef}
+              className="flex select-none"
+              style={{ 
+                transform: `translateX(-${translateX}px)`,
+                gap: `${cardGap}px`,
+                paddingTop: isMobile ? '8px' : '10px',
+                paddingBottom: isMobile ? '8px' : '10px',
+                marginLeft: `${edgeSpacing}px`,
+                transition: isTransitioning ? 'transform 300ms ease-out' : 'none',
+                cursor: isMobile && isDragging ? 'grabbing' : isMobile ? 'grab' : 'default'
+              }}
+              // Touch events with direction detection
+              onTouchStart={(e) => {
+                const touch = e.touches[0];
+                handleStart(touch.clientX, touch.clientY);
+              }}
+              onTouchMove={(e) => {
+                const touch = e.touches[0];
+                handleMove(touch.clientX, touch.clientY);
+                
+                // Only prevent default for horizontal scrolling
                 if (touchDirection === 'horizontal') {
                   e.preventDefault();
                 }
-              }
-            }}
-            onMouseUp={() => {
-              if (isMobile) handleEnd();
-            }}
-            onMouseLeave={() => {
-              if (isMobile) handleEnd();
-            }}
-          >
-            {infiniteCards.map((card, index) => (
-              <div
-                key={`${card.id}-${index}`}
-                className="rounded-[16px] md:rounded-[16px] flex-shrink-0 relative overflow-hidden group cursor-pointer hover:scale-[1.02] transition-transform duration-300 hover:z-10"
-                style={{ width: `${cardWidth}px`, height: `${cardHeight}px` }}
-              >
-                {/* Background Image */}
-                <Image
-                  src={card.backgroundImage}
-                  alt={card.title}
-                  fill
-                  className="object-cover"
-                  draggable={false}
-                />
-                
-                {/* Content Overlay */}
-                <div className="absolute inset-0 p-4 md:p-6 flex flex-col justify-between">
-                  {/* Pill */}
-                  <div className="flex justify-end">
-                    <div className="bg-[#e5dbb7] rounded-full px-3 py-1.5 md:px-4 md:py-2">
-                      <span className="text-black text-xs md:text-sm font-['Avenir_Next'] font-medium">
-                        {card.pill}
-                      </span>
+              }}
+              onTouchEnd={handleEnd}
+              // Mouse events for testing on desktop
+              onMouseDown={(e) => {
+                if (isMobile) {
+                  e.preventDefault();
+                  handleStart(e.clientX, e.clientY);
+                }
+              }}
+              onMouseMove={(e) => {
+                if (isMobile) {
+                  handleMove(e.clientX, e.clientY);
+                  if (touchDirection === 'horizontal') {
+                    e.preventDefault();
+                  }
+                }
+              }}
+              onMouseUp={() => {
+                if (isMobile) handleEnd();
+              }}
+              onMouseLeave={() => {
+                if (isMobile) handleEnd();
+              }}
+            >
+              {infiniteCards.map((card, index) => (
+                <div
+                  key={`${card.id}-${index}`}
+                  className="rounded-[16px] md:rounded-[16px] flex-shrink-0 relative overflow-hidden group cursor-pointer hover:scale-[1.02] transition-transform duration-300 hover:z-10"
+                  style={{ width: `${cardWidth}px`, height: `${cardHeight}px` }}
+                >
+                  {/* Background Image */}
+                  <Image
+                    src={card.backgroundImage}
+                    alt={card.title}
+                    fill
+                    className="object-cover"
+                    draggable={false}
+                  />
+                  
+                  {/* Content Overlay */}
+                  <div className="absolute inset-0 p-4 md:p-6 flex flex-col justify-between">
+                    {/* Pill */}
+                    <div className="flex justify-end">
+                      <div className={`rounded-full px-3 py-1.5 md:px-4 md:py-2 ${
+                        card.pill === 'Live' 
+                          ? 'bg-[#32BCAD]/15 border-[0.5px] border-[#32BCAD]' 
+                          : 'bg-[#E5DBB7]/15 border-[0.5px] border-[#E5DBB7]'
+                      }`}>
+                        <span className="text-white text-xs md:text-sm font-['Avenir_Next'] font-medium">
+                          {card.pill}
+                        </span>
+                      </div>
+                    </div>
+                    
+                    {/* Text Content */}
+                    <div className="space-y-2 md:space-y-3">
+                      <h3 className="text-white text-lg md:text-xl font-['Avenir_Next'] font-medium leading-tight">
+                        {card.title}
+                      </h3>
+                      <p className="text-[#ffffffbd] text-sm md:text-base font-['Avenir_Next'] leading-relaxed">
+                        {card.description}
+                      </p>
                     </div>
                   </div>
+                </div>
+              ))}
+              
+              {/* Edge spacer */}
+              <div 
+                className="flex-shrink-0"
+                style={{ width: `${edgeSpacing}px`, height: `${cardHeight}px` }}
+              />
+            </div>
+          </div>
+        </div>
+
+        {/* Desktop: Constrained Width */}
+        <div className="hidden md:block w-full px-4 sm:px-8 md:px-16 lg:px-24 xl:px-[120px]">
+          <div className="max-w-[1224px] mx-auto overflow-hidden">
+            <div 
+              className="flex select-none"
+              style={{ 
+                transform: `translateX(-${translateX}px)`,
+                gap: `${cardGap}px`,
+                paddingTop: '10px',
+                paddingBottom: '10px',
+                transition: isTransitioning ? 'transform 300ms ease-out' : 'none',
+              }}
+            >
+              {infiniteCards.map((card, index) => (
+                <div
+                  key={`${card.id}-${index}`}
+                  className="rounded-[16px] md:rounded-[16px] flex-shrink-0 relative overflow-hidden group cursor-pointer hover:scale-[1.02] transition-transform duration-300 hover:z-10"
+                  style={{ width: `${cardWidth}px`, height: `${cardHeight}px` }}
+                >
+                  {/* Background Image */}
+                  <Image
+                    src={card.backgroundImage}
+                    alt={card.title}
+                    fill
+                    className="object-cover"
+                    draggable={false}
+                  />
                   
-                  {/* Text Content */}
-                  <div className="space-y-2 md:space-y-3">
-                    <h3 className="text-white text-lg md:text-xl font-['Avenir_Next'] font-medium leading-tight">
-                      {card.title}
-                    </h3>
-                    <p className="text-[#888888] text-sm md:text-base font-['Avenir_Next'] leading-relaxed">
-                      {card.description}
-                    </p>
+                  {/* Content Overlay */}
+                  <div className="absolute inset-0 p-4 md:p-6 flex flex-col justify-between">
+                    {/* Pill */}
+                    <div className="flex justify-end">
+                      <div className={`rounded-full px-3 py-1.5 md:px-4 md:py-2 ${
+                        card.pill === 'Live' 
+                          ? 'bg-[#32BCAD]/15 border-[0.5px] border-[#32BCAD]' 
+                          : 'bg-[#E5DBB7]/15 border-[0.5px] border-[#E5DBB7]'
+                      }`}>
+                        <span className="text-white text-xs md:text-sm font-['Avenir_Next'] font-medium">
+                          {card.pill}
+                        </span>
+                      </div>
+                    </div>
+                    
+                    {/* Text Content */}
+                    <div className="space-y-2 md:space-y-3">
+                      <h3 className="text-white text-lg md:text-xl font-['Avenir_Next'] font-medium leading-tight">
+                        {card.title}
+                      </h3>
+                      <p className="text-[#ffffffbd] text-sm md:text-base font-['Avenir_Next'] leading-relaxed">
+                        {card.description}
+                      </p>
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))}
-            
-            {/* Edge spacer */}
-            <div 
-              className="flex-shrink-0"
-              style={{ width: `${edgeSpacing}px`, height: `${cardHeight}px` }}
-            />
+              ))}
+            </div>
           </div>
         </div>
       </div>

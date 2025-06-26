@@ -135,7 +135,7 @@ export default function BackersSection() {
                       className="w-full h-full object-contain"
                     />
                   </div>
-                  <div className="h-[42px] w-[263px] flex items-center justify-center">
+                  {/* <div className="h-[42px] w-[263px] flex items-center justify-center">
                     <Image
                       src="/binance-icon.svg"
                       alt="Binance.US"
@@ -143,71 +143,53 @@ export default function BackersSection() {
                       height={42}
                       className="w-full h-full object-contain"
                     />
-                  </div>
+                  </div> */}
                 </div>
               </div>
 
-              {/* Mobile Layout */}
+              {/* Mobile/Tablet Layout (1024px and smaller) */}
               <div className="lg:hidden mb-18">
-                {/* LED - Prelude */}
-                <div className="mb-6">
-                
-                  <div className="h-[39px] w-[222px] flex items-center justify-center">
+                {/* First Row - Top two logos side by side */}
+                <div className="flex items-center gap-6 mb-6 justify-start">
+                  <div className="h-[32px] w-[180px] flex items-center justify-start">
                     <Image
                       src="/prelude-icon.svg"
                       alt="Prelude"
-                      width={222}
-                      height={39}
+                      width={180}
+                      height={32}
                       className="w-full h-full object-contain"
                     />
                   </div>
-                </div>
-                
-                {/* CO-LED - Lemniscap */}
-                <div className="mb-6">
-               
-                  <div className="h-[45px] w-[226px] flex items-center justify-center">
+                  <div className="h-[36px] w-[184px] flex items-center justify-start">
                     <Image
                       src="/lemniscap-icon.svg"
                       alt="Lemniscap"
-                      width={226}
-                      height={45}
+                      width={184}
+                      height={36}
                       className="w-full h-full object-contain"
                     />
                   </div>
                 </div>
 
-                {/* Additional Investors */}
-                <div className="mb-6">
-                
-                  <div className="flex items-center gap-2 w-full">
-                    <div className="h-[24px] flex-1 flex items-center justify-center min-w-0">
-                      <Image
-                        src="/infinite-icon.svg"
-                        alt="Infinite Field"
-                        width={120}
-                        height={24}
-                        className="max-w-full h-full object-contain"
-                      />
-                    </div>
-                    <div className="h-[24px] flex-1 flex items-center justify-center min-w-0">
-                      <Image
-                        src="/kiln-icon.svg"
-                        alt="Kiln"
-                        width={63}
-                        height={24}
-                        className="max-w-full h-full object-contain"
-                      />
-                    </div>
-                    <div className="h-[25px] flex-1 flex items-center justify-center min-w-0">
-                      <Image
-                        src="/binance-icon.svg"
-                        alt="Binance.US"
-                        width={156}
-                        height={25}
-                        className="max-w-full h-full object-contain"
-                      />
-                    </div>
+                {/* Second Row - Other two logos left-aligned, a bit bigger */}
+                <div className="flex items-center gap-6 justify-start">
+                  <div className="h-[34px] w-[170px] flex items-center justify-start">
+                    <Image
+                      src="/infinite-icon.svg"
+                      alt="Infinite Field"
+                      width={170}
+                      height={34}
+                      className="w-full h-full object-contain"
+                    />
+                  </div>
+                  <div className="h-[34px] w-[90px] flex items-center justify-start">
+                    <Image
+                      src="/kiln-icon.svg"
+                      alt="Kiln"
+                      width={90}
+                      height={34}
+                      className="w-full h-full object-contain"
+                    />
                   </div>
                 </div>
               </div>
@@ -234,12 +216,7 @@ export default function BackersSection() {
               </div>
             ))}
             
-            {/* More coming soon */}
-            <div className={`bg-[#373737] rounded-[21px] flex items-center justify-center px-4 py-[5.5px] h-10 w-[181px] transition-all duration-500 ease-out ${pillsVisible ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-4 scale-95'}`} style={{ transitionDelay: pillsVisible ? `${0.6 + backers.length * 0.05}s` : '0s' }}>
-              <span className="text-white text-base font-['Avenir_Next'] whitespace-nowrap">
-                more coming soon..
-              </span>
-            </div>
+          
           </div>
         </div>
       </div>
@@ -319,11 +296,7 @@ export default function BackersSection() {
               </span>
             </div>
           ))}
-          <div className="bg-[#373737] rounded-[21px] flex items-center justify-center px-4 py-[5.5px] h-10 w-[181px]">
-            <span className="text-white text-base font-['Avenir_Next'] whitespace-nowrap">
-              more coming soon..
-            </span>
-          </div>
+          
         </div>
       </div>
     </section>

@@ -327,7 +327,7 @@ export default function DocsPage() {
             </a>
           </div>
 
-                      {/* Documentation Sections */}
+          {/* Documentation Sections */}
           <div className="mt-16 space-y-16">
             {/* Introduction Section */}
             <section id="introduction" className="scroll-mt-20">
@@ -491,7 +491,7 @@ export default function DocsPage() {
                       <div>
                         <h5 className="text-[#e5dbb7] font-medium text-sm">Seed Phrase Recovery</h5>
                         <p className="text-zinc-400 text-sm">Use your 12 or 24-word seed phrase to restore wallet access on any device.</p>
-                      </div>
+                  </div>
                       <div>
                         <h5 className="text-[#e5dbb7] font-medium text-sm">Social Recovery</h5>
                         <p className="text-zinc-400 text-sm">Set up trusted contacts who can help you recover your account if needed.</p>
@@ -726,9 +726,9 @@ export default function DocsPage() {
                             <div className="text-right">
                               <div className="text-white text-lg font-['Avenir_Next'] font-semibold">$45,234.56</div>
                               <div className="text-green-400 text-xs font-['Avenir_Next']">+2.34% (+$1,028)</div>
-                            </div>
-                          </div>
-                          
+                  </div>
+                </div>
+
                           {/* Simplified Candlestick Chart */}
                           <div className="relative h-32 bg-[#0f0f0f] rounded p-2">
                             <div className="flex items-end justify-between h-full space-x-1">
@@ -817,7 +817,7 @@ export default function DocsPage() {
                     <div className="p-4 bg-[#2a2a2c] rounded-lg border border-zinc-700">
                       <h4 className="text-white font-['Avenir_Next'] font-medium mb-2">Chart Analysis</h4>
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-2">
-                        <div>
+                <div>
                           <h5 className="text-[#e5dbb7] font-['Avenir_Next'] font-medium text-sm mb-1">Technical Indicators</h5>
                           <ul className="text-zinc-400 text-sm space-y-1 font-['Avenir_Next']">
                             <li>• Moving Averages (SMA, EMA)</li>
@@ -1113,7 +1113,7 @@ export default function DocsPage() {
                       <div>
                         <h5 className="text-[#e5dbb7] font-medium text-sm">Generate API Keys</h5>
                         <p className="text-zinc-400 text-sm">Create API keys in your account settings with specific permissions.</p>
-                      </div>
+                  </div>
                       <div>
                         <h5 className="text-[#e5dbb7] font-medium text-sm">Request Signing</h5>
                         <p className="text-zinc-400 text-sm">All requests must be signed using HMAC-SHA256 with your secret key.</p>
@@ -1208,7 +1208,7 @@ export default function DocsPage() {
                     <div className="p-4 bg-[#2a2a2c] rounded-lg border border-zinc-700">
                       <h4 className="text-white font-medium mb-2">How do I fund my account?</h4>
                       <p className="text-zinc-400 text-sm">You can fund your account via bank transfer, credit/debit card, or by transferring cryptocurrency from another wallet.</p>
-                    </div>
+                  </div>
                     
                     <div className="p-4 bg-[#2a2a2c] rounded-lg border border-zinc-700">
                       <h4 className="text-white font-medium mb-2">What are the trading fees?</h4>

@@ -59,7 +59,7 @@ export default function FeatureSection() {
             <h2 className="text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[48px] font-['Avenir_Next'] font-medium mb-4 leading-tight tracking-[0.1px]">
               Pro-grade mobile trading. All onchain.
             </h2>
-            <p className="text-[#888888] text-base sm:text-lg xl:text-[18px] max-w-[698px] mx-auto font-['Avenir_Next'] leading-relaxed">
+            <p className="text-[#ffffffbd] text-[18px] sm:text-lg xl:text-[18px] max-w-[698px] mx-auto font-['Avenir_Next'] font-medium leading-relaxed">
               Dexari gives you the speed, depth, and precision of a top-tier platform. Self-custodial by design and powered by Hyperliquid&apos;s high-performance order book.
             </p>
           </div>
@@ -82,7 +82,7 @@ export default function FeatureSection() {
               </h3>
               
               {/* Description */}
-              <p className="text-[#888888] text-sm font-['Avenir_Next'] font-medium leading-relaxed [@media(min-width:1080px)]:text-[18px]">
+              <p className="text-[#ffffffbd] text-[18px] font-['Avenir_Next'] font-medium leading-relaxed [@media(min-width:1080px)]:text-[18px]">
                 Access deep spot and perp liquidity with tight spreads and strong book depth, even during high volatility. Powered by Hyperliquid with $1.5T+ traded.
               </p>
             </div>
@@ -138,7 +138,7 @@ export default function FeatureSection() {
                     Orders fill in under 300ms
                   </h3>
                 </div>
-                <p className="text-[#888888] text-base lg:text-[18px] font-['Avenir_Next'] font-medium leading-relaxed">
+                <p className="text-[#ffffffbd] text-base lg:text-[18px] font-['Avenir_Next'] font-medium leading-relaxed">
                   Trade with low latency, low fees, and zero gas. Supports market, limit, TP/SL, stop, TWAP, and scale strategies.
                 </p>
               </div>
@@ -169,7 +169,7 @@ export default function FeatureSection() {
                     Pro charts, signals and alerts
                   </h3>
                 </div>
-                <p className="text-[#888888] text-base lg:text-[18px] font-['Avenir_Next'] font-medium leading-relaxed">
+                <p className="text-[#ffffffbd] text-base lg:text-[18px] font-['Avenir_Next'] font-medium leading-relaxed">
                   Execute your edge with TradingView&apos;s advanced charts and get real-time alerts for fills, margin usage and new listings.
                 </p>
               </div>
@@ -205,7 +205,7 @@ export default function FeatureSection() {
               </h3>
               
               {/* Description */}
-              <p className="text-[#888888] text-sm font-['Avenir_Next'] font-medium leading-relaxed [@media(min-width:1080px)]:text-[18px]">
+              <p className="text-[#ffffffbd] text-sm font-['Avenir_Next'] font-medium leading-relaxed [@media(min-width:1080px)]:text-[18px]">
                 Deposit with card, bank, or crypto. Move funds between accounts without bridging steps. Stay self-custodial with MFA, secured by Turnkey.
               </p>
             </div>

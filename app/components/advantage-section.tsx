@@ -91,6 +91,7 @@ export default function AdvantageSection() {
             fill
             className="object-contain object-center"
             priority
+            quality={100}
           />
         </div>
       </div>
@@ -116,6 +117,7 @@ export default function AdvantageSection() {
             fill
             className="object-contain object-center"
             priority
+            quality={100}
           />
         </div>
       </div>
@@ -153,14 +155,14 @@ export default function AdvantageSection() {
                     <h3 className="text-white text-[34px] font-['Avenir_Next'] font-medium leading-[42px] mb-6">
                       {advantages[0].title}
                     </h3>
-                    <p className="text-[#888888] text-[18px] font-['Avenir_Next'] leading-[24px]">
+                    <p className="text-[#ffffffbd] text-[18px] font-['Avenir_Next'] leading-[24px] font-medium">
                       {advantages[0].description}
                     </p>
                   </div>
                   
                   {/* Number Badge */}
                   <div className="w-fit border border-[rgba(240,241,243,0.2)] rounded px-4 py-2">
-                    <span className="text-[rgba(240,241,243,0.5)] text-[16px] font-['Inter'] font-normal leading-[24px]">
+                    <span className="text-[#ffffffbd] text-[16px] font-['Avenir_Next'] font-normal leading-[24px]">
                       {advantages[0].id}
                     </span>
                   </div>
@@ -196,14 +198,14 @@ export default function AdvantageSection() {
                     <h3 className="text-white text-[34px] font-['Avenir_Next'] font-medium leading-[42px] mb-6">
                       {advantages[1].title}
                     </h3>
-                    <p className="text-[#888888] text-[18px] font-['Avenir_Next'] leading-[24px]">
+                    <p className="text-[#ffffffbd] text-[18px] font-['Avenir_Next'] leading-[24px] font-medium">
                       {advantages[1].description}
                     </p>
                   </div>
                   
                   {/* Number Badge */}
                   <div className="w-fit border border-[rgba(240,241,243,0.2)] rounded px-4 py-2">
-                    <span className="text-[rgba(240,241,243,0.5)] text-[16px] font-['Inter'] font-normal leading-[24px]">
+                    <span className="text-[#ffffffbd] text-[16px] font-['Avenir_Next'] font-medum leading-[24px]">
                       {advantages[1].id}
                     </span>
                   </div>
@@ -239,14 +241,14 @@ export default function AdvantageSection() {
                     <h3 className="text-white text-[34px] font-['Avenir_Next'] font-medium leading-[42px] mb-6">
                       {advantages[2].title}
                     </h3>
-                    <p className="text-[#888888] text-[18px] font-['Avenir_Next'] leading-[24px]">
+                    <p className="text-[#ffffffbd] text-[18px] font-['Avenir_Next'] leading-[24px] font-medium">
                       {advantages[2].description}
                     </p>
                   </div>
                   
                   {/* Number Badge */}
                   <div className="w-fit border border-[rgba(240,241,243,0.2)] rounded px-4 py-2">
-                    <span className="text-[rgba(240,241,243,0.5)] text-[16px] font-['Inter'] font-normal leading-[24px]">
+                  <span className="text-[#ffffffbd] text-[16px] font-['Avenir_Next'] font-medum leading-[24px] ">
                       {advantages[2].id}
                     </span>
                   </div>
@@ -282,14 +284,14 @@ export default function AdvantageSection() {
                     <h3 className="text-white text-[34px] font-['Avenir_Next'] font-medium leading-[42px] mb-6">
                       {advantages[3].title}
                     </h3>
-                    <p className="text-[#888888] text-[18px] font-['Avenir_Next'] leading-[24px]">
+                    <p className="text-[#ffffffbd] text-[18px] font-['Avenir_Next'] leading-[24px]  font-medium">
                       {advantages[3].description}
                     </p>
                   </div>
                   
                   {/* Number Badge */}
                   <div className="w-fit border border-[rgba(240,241,243,0.2)] rounded px-4 py-2">
-                    <span className="text-[rgba(240,241,243,0.5)] text-[16px] font-['Inter'] font-normal leading-[24px]">
+                  <span className="text-[#ffffffbd] text-[16px] font-['Avenir_Next'] font-medum leading-[24px]">
                       {advantages[3].id}
                     </span>
                   </div>
@@ -319,7 +321,7 @@ export default function AdvantageSection() {
                     <h3 className="text-white text-xl sm:text-2xl lg:text-[34px] font-['Avenir_Next'] font-medium leading-tight lg:leading-[42px]">
                       {advantage.title}
                     </h3>
-                    <p className="text-[#888888] text-sm sm:text-base lg:text-[18px] font-['Avenir_Next'] leading-relaxed lg:leading-[24px] max-w-[480px]">
+                    <p className="text-[#ffffffbd] text-sm sm:text-base lg:text-[18px] font-['Avenir_Next'] leading-relaxed lg:leading-[24px] max-w-[480px]">
                       {advantage.description}
                     </p>
                   </div>

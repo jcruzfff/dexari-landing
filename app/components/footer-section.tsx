@@ -61,7 +61,7 @@ export default function FooterSection() {
                     </svg>
                   </button>
                 </div>
-                <p className="text-white text-[11px] font-normal font-['Avenir_Next'] leading-tight text-center">
+                <p className="text-[#ffffffbd] text-[11px] font-normal font-['Avenir_Next'] leading-tight text-center">
                   I confirm that I have read <span className="font-bold">Dexari&apos;s Privacy Policy</span> and agree with it.
                 </p>
               </div>
@@ -96,7 +96,7 @@ export default function FooterSection() {
             {/* Powered by and Secured by */}
             <div className="flex flex-row justify-center items-center gap-6 mb-6">
               <div className="flex items-center gap-2.5">
-                <span className="text-[#a6a6a6] text-xs font-normal font-['Avenir_Next']">
+                <span className="text-[#ffffffbd] text-xs font-normal font-['Avenir_Next']">
                   Powered by
                 </span>
                 <Image 
@@ -108,7 +108,7 @@ export default function FooterSection() {
                 />
               </div>
               <div className="flex items-center gap-2.5">
-                <span className="text-[#a6a6a6] text-xs font-normal font-['Avenir_Next']">
+                <span className="text-[#ffffffbd] text-xs font-normal font-['Avenir_Next']">
                   Secured by
                 </span>
                 <Image 
@@ -126,19 +126,19 @@ export default function FooterSection() {
             
             {/* Footer Links Mobile */}
             <div className="flex flex-nowrap justify-center items-center gap-3 text-center overflow-x-auto">
-              <a href="#" className="text-[#a6a6a6] text-xs font-normal font-['Avenir_Next'] hover:text-white transition-colors whitespace-nowrap">
+              <a href="#" className="text-[#ffffffbd] text-xs font-normal font-['Avenir_Next'] hover:text-white transition-colors whitespace-nowrap">
                 Disclaimer
               </a>
-              <a href="#" className="text-[#a6a6a6] text-xs font-normal font-['Avenir_Next'] hover:text-white transition-colors whitespace-nowrap">
+              <a href="#" className="text-[#ffffffbd] text-xs font-normal font-['Avenir_Next'] hover:text-white transition-colors whitespace-nowrap">
                 Help
               </a>
-              <a href="#" className="text-[#a6a6a6] text-xs font-normal font-['Avenir_Next'] hover:text-white transition-colors whitespace-nowrap">
+              <a href="#" className="text-[#ffffffbd] text-xs font-normal font-['Avenir_Next'] hover:text-white transition-colors whitespace-nowrap">
                 Privacy Policy
               </a>
-              <a href="#" className="text-[#a6a6a6] text-xs font-normal font-['Avenir_Next'] hover:text-white transition-colors whitespace-nowrap">
+              <a href="#" className="text-[#ffffffbd] text-xs font-normal font-['Avenir_Next'] hover:text-white transition-colors whitespace-nowrap">
                 Terms of Use
               </a>
-              <a href="#" className="text-[#a6a6a6] text-xs font-normal font-['Avenir_Next'] hover:text-white transition-colors whitespace-nowrap">
+              <a href="#" className="text-[#ffffffbd] text-xs font-normal font-['Avenir_Next'] hover:text-white transition-colors whitespace-nowrap">
                 Fee Schedule
               </a>
             </div>
@@ -163,14 +163,14 @@ export default function FooterSection() {
                 
                 {/* Description and Footer Info */}
                 <div className="flex flex-col gap-8">
-                  <p className="text-white text-2xl font-normal font-['Avenir_Next'] leading-7">
+                  <p className="text-[#ffffffbd] text-2xl font-normal font-['Avenir_Next'] leading-7">
                     Unlock the latest strategies shaping tomorrow&apos;s financial systems.
                   </p>
                   
                   {/* Powered by and Secured by */}
                   <div className="flex items-center gap-6">
                     <div className="flex items-center gap-2.5">
-                      <span className="text-[#a6a6a6] text-xs font-normal font-['Avenir_Next']">
+                      <span className="text-[#ffffffbd] text-xs font-normal font-['Avenir_Next']">
                         Powered by
                       </span>
                       <Image 
@@ -182,7 +182,7 @@ export default function FooterSection() {
                       />
                     </div>
                     <div className="flex items-center gap-2.5">
-                      <span className="text-[#a6a6a6] text-xs font-normal font-['Avenir_Next']">
+                      <span className="text-[#ffffffbd] text-xs font-normal font-['Avenir_Next']">
                         Secured by
                       </span>
                       <Image 
@@ -213,7 +213,7 @@ export default function FooterSection() {
                       </svg>
                     </button>
                   </div>
-                  <p className="text-white text-[13px] font-normal font-['Avenir_Next'] leading-tight">
+                  <p className="text-[#ffffffbd] text-[13px] font-normal font-['Avenir_Next'] leading-tight">
                     I confirm that I have read <span className="font-bold">Dexari&apos;s Privacy Policy</span> and agree with it.
                   </p>
                 </div>
@@ -271,19 +271,19 @@ export default function FooterSection() {
               
               {/* Footer Links */}
               <div className="flex items-center gap-6">
-                <a href="#" className="text-[#a6a6a6] text-xs font-normal font-['Avenir_Next'] hover:text-white transition-colors">
+                <a href="#" className="text-[#ffffffbd] text-xs font-normal font-['Avenir_Next'] hover:text-white transition-colors">
                   Disclaimer
                 </a>
-                <a href="#" className="text-[#a6a6a6] text-xs font-normal font-['Avenir_Next'] hover:text-white transition-colors">
+                <a href="#" className="text-[#ffffffbd] text-xs font-normal font-['Avenir_Next'] hover:text-white transition-colors">
                   Help
                 </a>
-                <a href="#" className="text-[#a6a6a6] text-xs font-normal font-['Avenir_Next'] hover:text-white transition-colors">
+                <a href="#" className="text-[#ffffffbd] text-xs font-normal font-['Avenir_Next'] hover:text-white transition-colors">
                   Privacy Policy
                 </a>
-                <a href="#" className="text-[#a6a6a6] text-xs font-normal font-['Avenir_Next'] hover:text-white transition-colors">
+                <a href="#" className="text-[#ffffffbd] text-xs font-normal font-['Avenir_Next'] hover:text-white transition-colors">
                   Terms of Use
                 </a>
-                <a href="#" className="text-[#a6a6a6] text-xs font-normal font-['Avenir_Next'] hover:text-white transition-colors">
+                <a href="#" className="text-[#ffffffbd] text-xs font-normal font-['Avenir_Next'] hover:text-white transition-colors">
                   Fee Schedule
                 </a>
               </div>
