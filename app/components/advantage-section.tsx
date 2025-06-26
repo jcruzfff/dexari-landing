@@ -1,6 +1,7 @@
 'use client';
 
 import Image from 'next/image';
+import { useRef, useEffect, useState } from 'react';
 
 const advantages = [
   {
@@ -34,13 +35,58 @@ const advantages = [
 ];
 
 export default function AdvantageSection() {
+  // Animation state for each card
+  const [headerVisible, setHeaderVisible] = useState(false);
+  const [topLeftVisible, setTopLeftVisible] = useState(false);
+  const [topRightVisible, setTopRightVisible] = useState(false);
+  const [bottomLeftVisible, setBottomLeftVisible] = useState(false);
+  const [bottomRightVisible, setBottomRightVisible] = useState(false);
+  const [mobileCardsVisible, setMobileCardsVisible] = useState(false);
+
+  // Refs for intersection observer
+  const headerRef = useRef<HTMLDivElement>(null);
+  const topLeftRef = useRef<HTMLDivElement>(null);
+  const topRightRef = useRef<HTMLDivElement>(null);
+  const bottomLeftRef = useRef<HTMLDivElement>(null);
+  const bottomRightRef = useRef<HTMLDivElement>(null);
+  const mobileCardsRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    // Intersection Observer for animations
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            if (entry.target === headerRef.current) setHeaderVisible(true);
+            if (entry.target === topLeftRef.current) setTopLeftVisible(true);
+            if (entry.target === topRightRef.current) setTopRightVisible(true);
+            if (entry.target === bottomLeftRef.current) setBottomLeftVisible(true);
+            if (entry.target === bottomRightRef.current) setBottomRightVisible(true);
+            if (entry.target === mobileCardsRef.current) setMobileCardsVisible(true);
+          }
+        });
+      },
+      { threshold: 0.1, rootMargin: '0px 0px -10% 0px' }
+    );
+
+    // Observe all elements
+    if (headerRef.current) observer.observe(headerRef.current);
+    if (topLeftRef.current) observer.observe(topLeftRef.current);
+    if (topRightRef.current) observer.observe(topRightRef.current);
+    if (bottomLeftRef.current) observer.observe(bottomLeftRef.current);
+    if (bottomRightRef.current) observer.observe(bottomRightRef.current);
+    if (mobileCardsRef.current) observer.observe(mobileCardsRef.current);
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <section id="advantage" className="relative w-full py-16 lg:py-24 bg-[#202022] overflow-hidden">
       {/* Desktop Background - Only show on xl screens and above */}
       <div className="hidden xl:block absolute inset-0 items-center justify-center" style={{ paddingTop: '120px' }}>
         <div className="relative w-[85%] h-[800px] xl:h-[900px] mx-auto">
           <Image
-            src="/Advantage-pantheon.svg"
+            src="/Advantage-pantheon-light.svg"
             alt="Dexari advantage background"
             fill
             className="object-contain object-center"
@@ -50,13 +96,13 @@ export default function AdvantageSection() {
       </div>
 
       {/* Header */}
-      <div className="text-center mb-1 lg:mb-4 relative z-20">
+      <div ref={headerRef} className={`text-center mb-1 lg:mb-[-24px] relative z-20 transition-all duration-700 ease-out ${headerVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
         <h2 className="text-white text-3xl sm:text-4xl lg:text-5xl xl:text-[48px] font-['Avenir_Next'] font-normal mb-6 lg:mb-8 leading-tight tracking-[0.1px]">
           The Dexari advantage
         </h2>
         
         {/* Learn More Button */}
-        <a href="/docs" className="inline-block bg-[#e5dbb7] text-[#202022] px-8 py-3 rounded-full font-['Avenir_Next'] font-semibold text-base hover:bg-[#ddd0a3] transition-colors duration-200">
+                      <a href="/docs" className="inline-block bg-[#e5dbb7] text-[#202022] px-8 py-3 rounded-[16px] font-['Avenir_Next'] font-semibold text-base hover:bg-[#ddd0a3] transition-colors duration-200">
           Learn more
         </a>
       </div>
@@ -65,7 +111,7 @@ export default function AdvantageSection() {
       <div className="xl:hidden flex justify-center mb-[-18px] lg:mb-16 relative z-10">
         <div className="relative w-[100%] h-[370px] sm:h-[420px] lg:h-[540px]">
           <Image
-            src="/advantage-pantheon-mobile.svg"
+            src="/advantage-pantheon-mobile-light.svg"
             alt="Dexari advantage mobile"
             fill
             className="object-contain object-center"
@@ -81,10 +127,12 @@ export default function AdvantageSection() {
           <div className="hidden xl:block relative min-h-[700px] xl:min-h-[800px]">
              {/* Self-custody Card - Top Left */}
              <div 
-               className="absolute w-[250px]" 
+               ref={topLeftRef}
+               className={`absolute w-[250px] transition-all duration-700 ease-out ${topLeftVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
                style={{ 
                  left: '0px',
-                 top: '0px'
+                 top: '0px',
+                 transitionDelay: topLeftVisible ? '0.1s' : '0s'
                }}
              >
               <div className="space-y-6">
@@ -122,10 +170,12 @@ export default function AdvantageSection() {
 
                          {/* Privacy Card - Top Right */}
              <div 
-               className="absolute w-[250px]" 
+               ref={topRightRef}
+               className={`absolute w-[250px] transition-all duration-700 ease-out ${topRightVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
                style={{ 
                  right: '0px',
-                 top: '0px'
+                 top: '0px',
+                 transitionDelay: topRightVisible ? '0.2s' : '0s'
                }}
              >
               <div className="space-y-6">
@@ -163,10 +213,12 @@ export default function AdvantageSection() {
 
                          {/* Permissionless Card - Bottom Left */}
              <div 
-               className="absolute w-[250px]" 
+               ref={bottomLeftRef}
+               className={`absolute w-[250px] transition-all duration-700 ease-out ${bottomLeftVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
                style={{ 
                  left: '0px',
-                 bottom: '0px'
+                 bottom: '0px',
+                 transitionDelay: bottomLeftVisible ? '0.3s' : '0s'
                }}
              >
               <div className="space-y-6">
@@ -204,10 +256,12 @@ export default function AdvantageSection() {
 
                          {/* Transparency Card - Bottom Right */}
              <div 
-               className="absolute w-[250px]" 
+               ref={bottomRightRef}
+               className={`absolute w-[250px] transition-all duration-700 ease-out ${bottomRightVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
                style={{ 
                  right: '0px',
-                 bottom: '0px'
+                 bottom: '0px',
+                 transitionDelay: bottomRightVisible ? '0.4s' : '0s'
                }}
              >
               <div className="space-y-6">
@@ -245,7 +299,7 @@ export default function AdvantageSection() {
           </div>
 
                                {/* Mobile/Tablet Layout - Visible on all screens below xl (including 1024px) */}
-          <div className="xl:hidden relative z-10">
+          <div ref={mobileCardsRef} className={`xl:hidden relative z-10 transition-all duration-700 ease-out ${mobileCardsVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
             <div className="space-y-12 lg:space-y-16 max-w-[600px] mx-auto">
               {advantages.map((advantage) => (
                 <div key={advantage.id} className="flex flex-col items-center text-center space-y-6 lg:space-y-8">

@@ -1,11 +1,60 @@
 'use client';
 
+import { useRef, useEffect, useState } from 'react';
+
 export default function FeatureSection() {
+  const videoRef1 = useRef<HTMLVideoElement>(null);
+  const videoRef2 = useRef<HTMLVideoElement>(null);
+
+  // Animation state
+  const [headerVisible, setHeaderVisible] = useState(false);
+  const [row1Visible, setRow1Visible] = useState(false);
+  const [row2Visible, setRow2Visible] = useState(false);
+  const [row3Visible, setRow3Visible] = useState(false);
+
+  // Refs for intersection observer
+  const headerRef = useRef<HTMLDivElement>(null);
+  const row1Ref = useRef<HTMLDivElement>(null);
+  const row2Ref = useRef<HTMLDivElement>(null);
+  const row3Ref = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    // Speed up the Deep Liquidity videos to 1.5x speed
+    if (videoRef1.current) {
+      videoRef1.current.playbackRate = 2;
+    }
+    if (videoRef2.current) {
+      videoRef2.current.playbackRate = 2;
+    }
+
+    // Intersection Observer for animations
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            if (entry.target === headerRef.current) setHeaderVisible(true);
+            if (entry.target === row1Ref.current) setRow1Visible(true);
+            if (entry.target === row2Ref.current) setRow2Visible(true);
+            if (entry.target === row3Ref.current) setRow3Visible(true);
+          }
+        });
+      },
+      { threshold: 0.1, rootMargin: '0px 0px -10% 0px' }
+    );
+
+    // Observe all elements
+    if (headerRef.current) observer.observe(headerRef.current);
+    if (row1Ref.current) observer.observe(row1Ref.current);
+    if (row2Ref.current) observer.observe(row2Ref.current);
+    if (row3Ref.current) observer.observe(row3Ref.current);
+
+    return () => observer.disconnect();
+  }, []);
   return (
     <section id="features" className="relative w-full py-16 lg:py-24 bg-[#202022]">
       <div className="w-full px-4 sm:px-8 md:px-16 lg:px-24 xl:px-[120px]">
         {/* Header Container */}
-        <div className="flex flex-col items-center justify-center text-center mb-12 lg:mb-16">
+        <div ref={headerRef} className={`flex flex-col items-center justify-center text-center mb-12 lg:mb-16 transition-all duration-700 ease-out ${headerVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <div className="max-w-[850px] mx-auto">
             <h2 className="text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[48px] font-['Avenir_Next'] font-medium mb-4 leading-tight tracking-[0.1px]">
               Pro-grade mobile trading. All onchain.
@@ -19,7 +68,7 @@ export default function FeatureSection() {
         {/* Content Container */}
         <div className="max-w-[1224px] mx-auto space-y-4">
           {/* Deep Liquidity Card */}
-          <div className="bg-[#2b2b2b] rounded-[24px] overflow-hidden [@media(min-width:1080px)]:rounded-[36px] [@media(min-width:1080px)]:flex [@media(min-width:1080px)]:min-h-[264px]">
+          <div ref={row1Ref} className={`bg-[#2b2b2b] rounded-[16px] overflow-hidden [@media(min-width:1080px)]:rounded-[16px] [@media(min-width:1080px)]:flex [@media(min-width:1080px)]:min-h-[264px] transition-all duration-700 ease-out ${row1Visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
             {/* Text Content Container */}
             <div className="p-6 space-y-4 [@media(min-width:1080px)]:flex-1 [@media(min-width:1080px)]:p-[48px] [@media(min-width:1080px)]:pr-[20px] [@media(min-width:1080px)]:space-y-6 [@media(min-width:1080px)]:flex [@media(min-width:1080px)]:flex-col [@media(min-width:1080px)]:justify-start">
               {/* deep Liquidity label */}
@@ -44,6 +93,7 @@ export default function FeatureSection() {
               <div className="[@media(min-width:1080px)]:hidden flex-1 mx-6 lg:mx-12 mb-0 flex flex-col justify-end">
                 <div className="w-full h-auto bg-[#343434] rounded-t-[24px] lg:rounded-t-[35px] overflow-hidden flex items-end">
                   <video
+                    ref={videoRef1}
                     autoPlay
                     loop
                     muted
@@ -60,6 +110,7 @@ export default function FeatureSection() {
               <div className="hidden [@media(min-width:1080px)]:flex [@media(min-width:1080px)]:flex-col [@media(min-width:1080px)]:justify-end [@media(min-width:1080px)]:h-full [@media(min-width:1080px)]:bg-[#343434] [@media(min-width:1080px)]:pt-[33px] [@media(min-width:1080px)]:px-[36px]">
                 <div className="w-full flex-1 rounded-t-[20px] overflow-hidden flex items-end">
                   <video
+                    ref={videoRef2}
                     autoPlay
                     loop
                     muted
@@ -75,9 +126,9 @@ export default function FeatureSection() {
           </div>
 
           {/* Two Column Cards */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+          <div ref={row2Ref} className={`grid grid-cols-1 lg:grid-cols-2 gap-4 transition-all duration-700 ease-out ${row2Visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
             {/* Fast Execution Card */}
-            <div className="bg-[#2b2b2b] rounded-[24px] lg:rounded-[36px] overflow-hidden flex flex-col justify-between min-h-[400px] lg:min-h-[665px]">
+            <div className="bg-[#2b2b2b] rounded-[16px] lg:rounded-[16px] overflow-hidden flex flex-col justify-between min-h-[400px] lg:min-h-[665px]">
               <div className="p-6 lg:p-12 space-y-4 max-w-[508px]">
                 <div className="space-y-2.5 max-w-[408px]">
                   <p className="text-[#ffffff] text-sm lg:text-[18px] font-['Avenir_Next'] font-medium tracking-[1.5px] uppercase leading-5">
@@ -100,7 +151,7 @@ export default function FeatureSection() {
                     playsInline
                     className="w-full h-auto object-contain object-bottom "
                   >
-                    <source src="/videos/dexari_long.mov" type="video/mp4" />
+                    <source src="/videos/dexari_long1.mov" type="video/mp4" />
                     Your browser does not support the video tag.
                   </video>
                 </div>
@@ -108,7 +159,7 @@ export default function FeatureSection() {
             </div>
 
             {/* Advanced Tools Card */}
-            <div className="bg-[#2b2b2b] rounded-[24px] lg:rounded-[36px] overflow-hidden flex flex-col justify-between min-h-[400px] lg:min-h-[665px]">
+            <div className="bg-[#2b2b2b] rounded-[16px] lg:rounded-[16px] overflow-hidden flex flex-col justify-between min-h-[400px] lg:min-h-[665px]">
               <div className="p-6 lg:p-12 space-y-4 lg:space-y-[22px] max-w-[508px]">
                 <div className="space-y-2.5">
                   <p className="text-[#ffffff] text-sm lg:text-[18px] font-['Avenir_Next'] font-medium tracking-[1.5px] uppercase leading-5">
@@ -140,7 +191,7 @@ export default function FeatureSection() {
           </div>
 
           {/* Zero Friction Card */}
-          <div className="bg-[#2b2b2b] rounded-[24px] w-full relative overflow-hidden [@media(min-width:1080px)]:rounded-[36px] [@media(min-width:1080px)]:min-h-[357px]">
+          <div ref={row3Ref} className={`bg-[#2b2b2b] rounded-[16px] w-full relative overflow-hidden [@media(min-width:1080px)]:rounded-[16px] [@media(min-width:1080px)]:min-h-[357px] transition-all duration-700 ease-out ${row3Visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
             {/* Text Content Container - Mobile: normal flow, Desktop: absolute positioning */}
             <div className="p-6 space-y-4 [@media(min-width:1080px)]:absolute [@media(min-width:1080px)]:left-[48px] [@media(min-width:1080px)]:top-[50px] [@media(min-width:1080px)]:right-[520px] [@media(min-width:1080px)]:bottom-[50px] [@media(min-width:1080px)]:flex [@media(min-width:1080px)]:flex-col [@media(min-width:1080px)]:justify-start [@media(min-width:1080px)]:p-0 [@media(min-width:1080px)]:space-y-6 [@media(min-width:1080px)]:max-w-none">
               {/* zero friction label */}

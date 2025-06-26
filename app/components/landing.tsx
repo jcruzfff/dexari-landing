@@ -1,12 +1,12 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
-import Banner from './banner';
+// import Banner from './banner';
 import Navbar from './navbar';
 import HeroSection from './hero-section';
 import FeatureSection from './feature-section';
-import PartnersSection from './partners-section';
+
 import TestimonialSection from './testimonial-section';
 import AdvantageSection from './advantage-section';
 import BackersSection from './backers-section';
@@ -15,7 +15,7 @@ import FooterSection from './footer-section';
 
 export default function Landing() {
   const heroRef = useRef<HTMLElement>(null);
-  const [isBannerVisible, setIsBannerVisible] = useState(true);
+  // const [isBannerVisible, setIsBannerVisible] = useState(true);
 
   useEffect(() => {
     if (!heroRef.current) return;
@@ -72,10 +72,11 @@ export default function Landing() {
 
   return (
     <main ref={heroRef} className="bg-[#202022] relative min-h-screen text-white overflow-x-hidden">
-      <Banner isBannerVisible={isBannerVisible} setIsBannerVisible={setIsBannerVisible} />
-      <Navbar isBannerVisible={isBannerVisible} />
-      <HeroSection isBannerVisible={isBannerVisible} />
-      <PartnersSection />
+      {/* <Banner isBannerVisible={isBannerVisible} setIsBannerVisible={setIsBannerVisible} /> */}
+      {/* <Navbar isBannerVisible={isBannerVisible} />
+      <HeroSection isBannerVisible={isBannerVisible} /> */}
+      <Navbar />
+      <HeroSection />
       <FeatureSection />
       <TestimonialSection />
       <AdvantageSection />

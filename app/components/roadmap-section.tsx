@@ -251,7 +251,7 @@ export default function RoadmapSection() {
             
             {/* Description */}
             <div className="lg:max-w-[476px]">
-              <p className="text-[#969799] text-base lg:text-[17px] font-['Inter'] font-semibold leading-relaxed">
+              <p className="text-[#969799] text-base lg:text-[17px] font-['Avenir_Next'] font-medium leading-relaxed">
                 See what&apos;s launching next as Dexari expands into yield, spending, borrowing, and onchain apps. Built for traders who want power in their pocket.
               </p>
             </div>
@@ -314,7 +314,7 @@ export default function RoadmapSection() {
             {infiniteCards.map((card, index) => (
               <div
                 key={`${card.id}-${index}`}
-                className="rounded-[24px] md:rounded-[36px] flex-shrink-0 relative overflow-hidden group cursor-pointer hover:scale-[1.02] transition-transform duration-300 hover:z-10"
+                className="rounded-[16px] md:rounded-[16px] flex-shrink-0 relative overflow-hidden group cursor-pointer hover:scale-[1.02] transition-transform duration-300 hover:z-10"
                 style={{ width: `${cardWidth}px`, height: `${cardHeight}px` }}
               >
                 {/* Background Image */}
@@ -330,8 +330,8 @@ export default function RoadmapSection() {
                 <div className="absolute inset-0 p-4 md:p-6 flex flex-col justify-between">
                   {/* Pill */}
                   <div className="flex justify-end">
-                    <div className="bg-[#b38d5f] rounded-full px-3 py-1.5 md:px-4 md:py-2">
-                      <span className="text-white text-xs md:text-sm font-['Avenir_Next'] font-medium">
+                    <div className="bg-[#e5dbb7] rounded-full px-3 py-1.5 md:px-4 md:py-2">
+                      <span className="text-black text-xs md:text-sm font-['Avenir_Next'] font-medium">
                         {card.pill}
                       </span>
                     </div>
@@ -364,7 +364,7 @@ export default function RoadmapSection() {
         {/* Previous Button */}
         <button
           onClick={handlePrevious}
-          className="bg-[#e5dbb7] rounded-[28px] md:rounded-[34px] w-[56px] h-[56px] md:w-[68px] md:h-[68px] flex items-center justify-center transition-all duration-200 hover:bg-[#ddd5a8]"
+          className="bg-[#343434] rounded-[28px] md:rounded-[34px] w-[56px] h-[56px] md:w-[68px] md:h-[68px] flex items-center justify-center transition-all duration-200 hover:bg-[#454545] opacity-40"
         >
           <svg
             width={isMobile ? "28" : "34"}
@@ -374,7 +374,7 @@ export default function RoadmapSection() {
           >
             <path
               d="M28.3332 15.5833H11.0924L19.0115 7.66408L16.9999 5.66658L5.66653 16.9999L16.9999 28.3333L18.9974 26.3358L11.0924 18.4166H28.3332V15.5833Z"
-              fill="black"
+              fill="white"
             />
           </svg>
         </button>
@@ -382,7 +382,7 @@ export default function RoadmapSection() {
         {/* Next Button */}
         <button
           onClick={handleNext}
-          className="bg-[#e5dbb7] rounded-[28px] md:rounded-[34px] w-[56px] h-[56px] md:w-[68px] md:h-[68px] flex items-center justify-center transition-all duration-200 hover:bg-[#ddd5a8]"
+          className="bg-[#343434] rounded-[28px] md:rounded-[34px] w-[56px] h-[56px] md:w-[68px] md:h-[68px] flex items-center justify-center transition-all duration-200 hover:bg-[#454545] opacity-40"
         >
           <svg
             width={isMobile ? "28" : "34"}
@@ -392,7 +392,7 @@ export default function RoadmapSection() {
           >
             <path
               d="M16.9995 5.66634L15.002 7.66384L22.907 15.583H5.66615V18.4163H22.907L15.002 26.3355L16.9995 28.333L28.3328 16.9997L16.9995 5.66634Z"
-              fill="black"
+              fill="white"
             />
           </svg>
         </button>

@@ -119,10 +119,32 @@
 
   body {
     @apply bg-background text-foreground;
+    overflow-x: hidden;
+    overflow-y: auto;
   }
 }
 
 @layer utilities {
+
+  /* Navigation Animation - Keep only for navbar */
+  .nav-animate {
+    animation: fadeInUp 0.8s ease-out forwards;
+    animation-delay: 0.1s;
+  }
+
+
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 
   /* Custom responsive padding system */
   .responsive-padding {

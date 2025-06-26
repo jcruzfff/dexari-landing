@@ -88,7 +88,7 @@ export default function TestimonialSection() {
                     </button>
                     <button
                       onClick={goToNext}
-                      className="bg-[#e5dbb7] rounded-full w-[68px] h-[68px] flex items-center justify-center transition-opacity hover:opacity-80"
+                      className="bg-[#343434] rounded-full w-[68px] h-[68px] flex items-center justify-center transition-opacity hover:opacity-80"
                       aria-label="Next testimonial"
                     >
                       <svg
@@ -96,10 +96,11 @@ export default function TestimonialSection() {
                         height="34"
                         viewBox="0 0 34 34"
                         fill="none"
+                        className="opacity-40"
                       >
                         <path
                           d="M16.9995 5.66634L15.002 7.66384L22.907 15.583H5.66615V18.4163H22.907L15.002 26.3355L16.9995 28.333L28.3328 16.9997L16.9995 5.66634Z"
-                          fill="black"
+                          fill="white"
                         />
                       </svg>
                     </button>
@@ -222,7 +223,7 @@ export default function TestimonialSection() {
                     </button>
                     <button
                       onClick={goToNext}
-                      className="bg-[#e5dbb7] rounded-3xl w-12 h-12 flex items-center justify-center transition-opacity hover:opacity-80"
+                      className="bg-[#343434] rounded-3xl w-12 h-12 flex items-center justify-center transition-opacity hover:opacity-80"
                       aria-label="Next testimonial"
                     >
                       <svg
@@ -230,10 +231,11 @@ export default function TestimonialSection() {
                         height="24"
                         viewBox="0 0 24 24"
                         fill="none"
+                        className="opacity-40"
                       >
                         <path
                           d="M11.9997 3.99971L10.5897 5.40971L16.1697 10.9997H3.99966V12.9997H16.1697L10.5897 18.5897L11.9997 19.9997L19.9997 11.9997L11.9997 3.99971Z"
-                          fill="black"
+                          fill="white"
                         />
                       </svg>
                     </button>

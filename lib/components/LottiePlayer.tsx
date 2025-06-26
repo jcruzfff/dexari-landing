@@ -39,7 +39,7 @@ export const LottiePlayer = ({
       loop,
       canvas: canvasRef.current,
       src,
-      speed,
+        speed,
     });
 
     dotLottieRef.current = dotLottie;
