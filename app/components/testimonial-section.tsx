@@ -14,10 +14,10 @@ interface Testimonial {
 const testimonials: Testimonial[] = [
   {
     id: 1,
-    quote: "Trading on Dexari feels seamless, secure, and lightning-fast—and I finally have everything I need in one place.",
-    name: "Name name",
-    title: "Founder | Company",
-    image: "/testimonial-1.jpg" // Placeholder image path
+    quote: "Accessing Hyperliquid directly from my phone means I can monitor positions and execute while out and about. It has been a game-changer for my portfolio and for my peace of mind",
+    name: "@biggiesmac",
+    title: "Day Trader",
+    image: "/biggiemac.jpg"
   },
   // Add more testimonials here as needed
 ];
@@ -40,7 +40,7 @@ export default function TestimonialSection() {
   const currentTestimonialData = testimonials[currentTestimonial];
 
   return (
-    <section className="relative w-full py-16 lg:py-24 bg-[#202022]">
+    <section className="relative w-full py-16 lg:py-36 bg-[#202022]">
       <div className="w-full px-4 sm:px-8 md:px-16 lg:px-24 xl:px-[120px]">
         <div className="max-w-[1224px] mx-auto">
           {/* Desktop Layout */}
@@ -110,11 +110,11 @@ export default function TestimonialSection() {
             </div>
 
             {/* Vertical Divider */}
-            <div className="h-[226px] w-px">
+            <div className="h-[426px] w-px">
               <svg
                 width="2"
-                height="226"
-                viewBox="0 0 2 226"
+                height="426"
+                viewBox="0 0 2 426"
                 fill="none"
                 className="w-full h-full"
               >
@@ -129,15 +129,13 @@ export default function TestimonialSection() {
             <div className="flex flex-col items-start gap-[22px] w-[201px]">
               {/* Profile Picture */}
               <div className="bg-[#2b2b2b] rounded-full w-[118px] h-[118px] flex items-center justify-center overflow-hidden">
-                <div className="w-full h-full bg-[#2b2b2b] rounded-full" />
-                {/* Uncomment when you have actual images */}
-                {/* <Image
+                <Image
                   src={currentTestimonialData.image}
                   alt={currentTestimonialData.name}
                   width={118}
                   height={118}
                   className="w-full h-full object-cover rounded-full"
-                /> */}
+                />
               </div>
 
               {/* User Info */}
@@ -179,15 +177,13 @@ export default function TestimonialSection() {
                   <div className="flex flex-col gap-[22px] w-[201px]">
                     {/* Profile Picture */}
                     <div className="bg-[#2b2b2b] rounded-full w-[104px] h-[104px] flex items-center justify-center overflow-hidden">
-                      <div className="w-full h-full bg-[#2b2b2b] rounded-full" />
-                      {/* Uncomment when you have actual images */}
-                      {/* <Image
+                      <Image
                         src={currentTestimonialData.image}
                         alt={currentTestimonialData.name}
                         width={104}
                         height={104}
                         className="w-full h-full object-cover rounded-full"
-                      /> */}
+                      />
                     </div>
 
                     {/* User Info */}

@@ -8,50 +8,49 @@ const roadmapCards = [
   {
     id: 1,
     title: "Trade",
-    description: "Spot and perp markets with up to 40x leverage.",
+    description: "Perps and spot markets with up to 40x leverage and deep liquidity.",
     pill: "Live",
     backgroundImage: "/learn-card2.svg"
   },
   {
     id: 2,
     title: "Deposit",
-    description: "Fund your account instantly with card, bank transfers, and more.",
+    description: "Fund instantly with card, bank transfer, or crypto from any wallet.",
     pill: "Live",
     backgroundImage: "/learn-card6.svg"
   },
   {
     id: 3,
     title: "Explore",
-    description: "Browse and connect to emerging dApps with your Dexari account.",
+    description: "Connect to top apps across chains, including on HyperEVM. ",
     pill: "Q3 2025",
     backgroundImage: "/learn-card4.svg"
   },
   {
     id: 4,
     title: "Invest",
-    description: "Discover and buy new cryptos early using DCA and TP/SL strategies.",
+    description: "Discover and buy new tokens early with advanced DCA and TP/SL strategies.",
     pill: "Q3 2025",
     backgroundImage: "/learn-card5.svg"
   },
   {
     id: 5,
+    title: "Earn",
+    description: "Put idle assets to work with auto-compounding yield strategies.",
+    pill: "Q4 2025",
+    backgroundImage: "/learn-card3.svg"
+  },
+  {
+    id: 6,
     title: "Borrow",
-    description: "Use crypto collateral to borrow cash instantly.",
+    description: "Use crypto as collateral to borrow cash instantly. No middlemen.",
     pill: "Q4 2025",
     backgroundImage: "/learn-card1.svg"
   },
   {
-    id: 6,
-    title: "Earn",
-    description: "Put idle assets to work with auto-compounding cash and crypto yield.",
-    pill: "Q4 2025",
-    backgroundImage: "/learn-card3.svg"
-  },
-
-  {
     id: 7,
     title: "Spend",
-    description: "Use your Dexari credit card to spend self-custodied funds anywhere.",
+    description: "Spend directly from your Dexari account with a self-custodial credit card.",
     pill: "Early 2026",
     backgroundImage: "/learn-card7.svg"
   }
@@ -245,14 +244,14 @@ export default function RoadmapSection() {
             {/* Title */}
             <div className="flex-shrink-0">
               <h2 className="text-white text-2xl sm:text-3xl md:text-4xl lg:text-[48px] font-['Avenir_Next'] font-medium leading-tight tracking-[0.1px]">
-                The Dexari roadmap
+              What’s next for Dexari?
               </h2>
             </div>
             
             {/* Description */}
             <div className="lg:max-w-[486px]">
               <p className="text-[#ffffffbd] text-base lg:text-[18px] font-['Avenir_Next'] font-medium leading-relaxed">
-                See what&apos;s launching next as Dexari expands into yield, spending, borrowing, and onchain apps. Built for traders who want power in their pocket.
+              Yield, spending, borrowing, and more — coming soon.
               </p>
             </div>
           </div>
@@ -332,10 +331,10 @@ export default function RoadmapSection() {
                   <div className="absolute inset-0 p-4 md:p-6 flex flex-col justify-between">
                     {/* Pill */}
                     <div className="flex justify-end">
-                      <div className={`rounded-full px-3 py-1.5 md:px-4 md:py-2 ${
+                      <div className={`rounded-full px-5 py-1 ${
                         card.pill === 'Live' 
                           ? 'bg-[#32BCAD]/15 border-[0.5px] border-[#32BCAD]' 
-                          : 'bg-[#E5DBB7]/15 border-[0.5px] border-[#E5DBB7]'
+                          : 'bg-[#b38d5f]/30 border-[0.5px] border-[#b38d5f]'
                       }`}>
                         <span className="text-white text-xs md:text-sm font-['Avenir_Next'] font-medium">
                           {card.pill}
@@ -397,10 +396,10 @@ export default function RoadmapSection() {
                   <div className="absolute inset-0 p-4 md:p-6 flex flex-col justify-between">
                     {/* Pill */}
                     <div className="flex justify-end">
-                      <div className={`rounded-full px-3 py-1.5 md:px-4 md:py-2 ${
+                      <div className={`rounded-full px-4 py-1 pb-1.5 ${
                         card.pill === 'Live' 
                           ? 'bg-[#32BCAD]/15 border-[0.5px] border-[#32BCAD]' 
-                          : 'bg-[#E5DBB7]/15 border-[0.5px] border-[#E5DBB7]'
+                          : 'bg-[#b38d5f]/30 border-[0.5px] border-[#b38d5f]'
                       }`}>
                         <span className="text-white text-xs md:text-sm font-['Avenir_Next'] font-medium">
                           {card.pill}

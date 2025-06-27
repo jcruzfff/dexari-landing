@@ -43,10 +43,10 @@ export default function HeroSection() {
               <div className="w-full">
                 <div className={`flex flex-col gap-4 md:gap-6 font-['Avenir_Next'] font-medium text-white 'pt-16'}`}>
                   <h1 ref={titleRef} className={`text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-[48px] leading-tight lg:leading-[72px] tracking-[0.1px] transition-all duration-700 ease-out ${titleVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-                    Lorem ipsum dolor sit amet
+                    Trade perps onchain. <br /> Anytime. Anywhere.
                   </h1>
                   <p ref={subtitleRef} className={`text-base sm:text-lg md:text-xl lg:text-2xl xl:text-[24px] leading-relaxed lg:leading-normal max-w-full lg:max-w-[603px] text-[#ffffffbd] transition-all duration-700 ease-out ${subtitleVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Go long or short with leverage, pro charts, and advanced order types — all in a seamless, self-custodial app built for serious traders.
                   </p>
                 </div>
               </div>
@@ -123,23 +123,23 @@ export default function HeroSection() {
             <div className="sm:hidden">
               <div className="grid grid-cols-2 gap-x-4 gap-y-5 place-items-center max-w-xs mx-auto">
                 {/* Hyperliquid Logo */}
-                <div className="h-5 w-full flex items-center justify-center">
+                <div className="w-full flex items-center justify-center h-[37px]">
                   <Image 
                     src="/hyperliquid-logo.svg" 
                     alt="Hyperliquid" 
                     width={186}
-                    height={42}
-                    className="h-5 w-auto opacity-70 hover:opacity-100 transition-opacity duration-300"
+                    height={37}
+                    className="h-[37px] w-auto"
                   />
                 </div>
                 {/* Turnkey Logo */}
-                <div className="h-5 w-full flex items-center justify-center">
+                <div className="h-5 w-full flex items-center justify-center pt-1 pl-1">
                   <Image 
                     src="/turnkey-logo.svg" 
                     alt="Turnkey" 
                     width={235}
                     height={37}
-                    className="h-5 w-auto opacity-70 hover:opacity-100 transition-opacity duration-300"
+                    className="h-6 w-auto"
                     quality={100}
                   />
                 </div>
@@ -150,7 +150,7 @@ export default function HeroSection() {
                     alt="Partner Logo" 
                     width={137}
                     height={21}
-                    className="h-5 w-auto opacity-70 hover:opacity-100 transition-opacity duration-300"
+                    className="h-5 w-auto"
                   />
                 </div>
                 {/* Partner Logo 2 */}
@@ -160,7 +160,7 @@ export default function HeroSection() {
                     alt="Partner Logo" 
                     width={101}
                     height={21}
-                    className="h-5 w-auto opacity-70 hover:opacity-100 transition-opacity duration-300"
+                    className="h-5 w-auto"
                   />
                 </div>
                 {/* Partner Logo 3 */}
@@ -170,17 +170,17 @@ export default function HeroSection() {
                     alt="Partner Logo" 
                     width={87}
                     height={21}
-                    className="h-5 w-auto opacity-70 hover:opacity-100 transition-opacity duration-300"
+                    className="h-5 w-auto"
                   />
                 </div>
                 {/* Partner Logo 4 */}
-                <div className="h-5 w-full flex items-center justify-center">
+                <div className="h-7 w-full flex items-center justify-center">
                   <Image 
                     src="/hero-logo4.svg" 
                     alt="Partner Logo" 
                     width={99}
                     height={21}
-                    className="h-5 w-auto opacity-70 hover:opacity-100 transition-opacity duration-300"
+                    className="h-6 w-auto"
                   />
                 </div>
                 {/* Partner Logo 5 */}
@@ -190,7 +190,7 @@ export default function HeroSection() {
                     alt="Partner Logo" 
                     width={110}
                     height={21}
-                    className="h-5 w-auto opacity-70 hover:opacity-100 transition-opacity duration-300"
+                    className="h-5 w-auto"
                   />
                 </div>
                 {/* Partner Logo 6 */}
@@ -200,7 +200,7 @@ export default function HeroSection() {
                     alt="Partner Logo" 
                     width={70}
                     height={21}
-                    className="h-5 w-auto opacity-70 hover:opacity-100 transition-opacity duration-300"
+                    className="h-5 w-auto"
                   />
                 </div>
               </div>
@@ -214,13 +214,13 @@ export default function HeroSection() {
                   <p className="text-white text-base lg:text-lg font-['Avenir_Next'] font-medium tracking-[0.1px]">
                     Powered by:
                   </p>
-                  <div className="h-6 sm:h-7 md:h-8 lg:h-[42px] flex items-center">
+                  <div className="h-[36px] flex items-center">
                     <Image 
                       src="/hyperliquid-logo.svg" 
                       alt="Hyperliquid" 
                       width={186}
-                      height={42}
-                      className="h-6 sm:h-7 md:h-8 lg:h-[42px] w-auto"
+                      height={36}
+                      className="h-[36px] w-auto"
                     />
                   </div>
                 </div>
@@ -228,13 +228,13 @@ export default function HeroSection() {
                   <p className="text-white text-base lg:text-lg font-['Avenir_Next'] font-medium tracking-[0.1px]">
                     Secured by:
                   </p>
-                  <div className="h-6 sm:h-7 md:h-8 lg:h-[37px] flex items-center">
+                  <div className="h-[37px] flex items-center">
                     <Image 
                       src="/turnkey-logo.svg" 
                       alt="Turnkey" 
                       width={235}
                       height={37}
-                      className="h-6 sm:h-7 md:h-8 lg:h-[37px] w-auto"
+                      className="h-[37px] w-auto"
                       quality={100}
                     />
                   </div>
@@ -250,7 +250,7 @@ export default function HeroSection() {
                       alt="Partner Logo" 
                       width={137}
                       height={21}
-                      className="h-4 xs:h-5 sm:h-6 md:h-7 lg:h-[21px] xl:h-[23px] w-auto opacity-70 hover:opacity-100 transition-opacity duration-300"
+                      className="h-4 xs:h-5 sm:h-6 md:h-7 lg:h-[21px] xl:h-[23px] w-auto"
                     />
                   </div>
                   <div className="h-4 xs:h-5 sm:h-6 md:h-7 lg:h-[21px] xl:h-[23px] flex items-center">
@@ -259,7 +259,7 @@ export default function HeroSection() {
                       alt="Partner Logo" 
                       width={101}
                       height={21}
-                      className="h-4 xs:h-5 sm:h-6 md:h-7 lg:h-[21px] xl:h-[23px] w-auto opacity-70 hover:opacity-100 transition-opacity duration-300"
+                      className="h-4 xs:h-5 sm:h-6 md:h-7 lg:h-[21px] xl:h-[23px] w-auto"
                     />
                   </div>
                   <div className="h-4 xs:h-5 sm:h-6 md:h-7 lg:h-[21px] xl:h-[23px] flex items-center">
@@ -268,18 +268,18 @@ export default function HeroSection() {
                       alt="Partner Logo" 
                       width={87}
                       height={21}
-                      className="h-4 xs:h-5 sm:h-6 md:h-7 lg:h-[21px] xl:h-[23px] w-auto opacity-70 hover:opacity-100 transition-opacity duration-300"
+                      className="h-4 xs:h-5 sm:h-6 md:h-7 lg:h-[21px] xl:h-[23px] w-auto"
                     />
                   </div>
                 </div>
                 <div className="flex gap-8 sm:gap-10 md:gap-12 lg:gap-6 [@media(min-width:1100px)]:gap-8 xl:gap-12 items-center justify-center lg:justify-end">
-                  <div className="h-4 xs:h-5 sm:h-6 md:h-7 lg:h-[21px] xl:h-[23px] flex items-center">
+                  <div className="h-7 xs:h-5 sm:h-6 md:h-7 lg:h-[26px] xl:h-[26px] flex items-center">
                     <Image 
                       src="/hero-logo4.svg" 
                       alt="Partner Logo" 
                       width={99}
-                      height={21}
-                      className="h-4 xs:h-5 sm:h-6 md:h-7 lg:h-[21px] xl:h-[23px] w-auto opacity-70 hover:opacity-100 transition-opacity duration-300"
+                      height={22}
+                      className="h-4 xs:h-5 sm:h-6 md:h-7 lg:h-[24px] xl:h-[28px] w-auto"
                     />
                   </div>
                   <div className="h-4 xs:h-5 sm:h-6 md:h-7 lg:h-[21px] xl:h-[23px] flex items-center">
@@ -288,7 +288,7 @@ export default function HeroSection() {
                       alt="Partner Logo" 
                       width={110}
                       height={21}
-                      className="h-4 xs:h-5 sm:h-6 md:h-7 lg:h-[21px] xl:h-[23px] w-auto opacity-70 hover:opacity-100 transition-opacity duration-300"
+                      className="h-4 xs:h-5 sm:h-6 md:h-7 lg:h-[21px] xl:h-[23px] w-auto"
                     />
                   </div>
                   <div className="h-4 xs:h-5 sm:h-6 md:h-7 lg:h-[21px] xl:h-[23px] flex items-center">
@@ -297,7 +297,7 @@ export default function HeroSection() {
                       alt="Partner Logo" 
                       width={70}
                       height={21}
-                      className="h-4 xs:h-5 sm:h-6 md:h-7 lg:h-[21px] xl:h-[23px] w-auto opacity-70 hover:opacity-100 transition-opacity duration-300"
+                      className="h-4 xs:h-5 sm:h-6 md:h-7 lg:h-[21px] xl:h-[23px] w-auto"
                     />
                   </div>
                 </div>

@@ -26,24 +26,22 @@ export default function FooterSection() {
             {/* Description */}
             <div className="text-center mb-8">
               <p className="text-white text-2xl font-normal font-['Avenir_Next'] leading-7 max-w-[397px] mx-auto">
-                Unlock the latest strategies shaping tomorrow&apos;s financial systems.
+                Freedom. Power. Control.
               </p>
             </div>
             
             {/* Social Media Links */}
             <div className="flex justify-center items-center gap-5 mb-32">
-              <a href="#" className="hover:opacity-80 transition-opacity">
+              <a href="https://x.com/DexariDotCom" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity">
                 <Image src="/x-icon.svg" alt="X (Twitter)" width={42} height={42} />
               </a>
-              <a href="#" className="hover:opacity-80 transition-opacity">
+              <a href="https://discord.gg/AAcKKQkEyW" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity">
                 <Image src="/discord-icon.svg" alt="Discord" width={42} height={42} />
               </a>
-              <a href="#" className="hover:opacity-80 transition-opacity">
+              <a href="https://t.me/DexariDotComOfficial" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity">
                 <Image src="/tg-icon.svg" alt="Telegram" width={42} height={42} />
               </a>
-              <a href="#" className="hover:opacity-80 transition-opacity">
-                <Image src="/github-icon.svg" alt="GitHub" width={42} height={42} />
-              </a>
+            
             </div>
             
             {/* Email Input */}
@@ -52,7 +50,7 @@ export default function FooterSection() {
                 <div className="relative">
                   <input
                     type="email"
-                    placeholder="What's your email?"
+                    placeholder="Subscribe for email updates from Dexari"
                     className="w-full h-[60px] bg-[#2b2b2b] rounded-full border-2 border-[#6d6d6d]/20 px-6 pr-16 text-white text-base font-medium font-['Avenir_Next'] placeholder-white focus:outline-none focus:border-[#6d6d6d]/40 transition-colors"
                   />
                   <button className="absolute right-2 top-2 w-11 h-11 bg-[#e5dbb7] rounded-full flex items-center justify-center hover:bg-[#e5dbb7]/90 transition-colors">
@@ -104,7 +102,7 @@ export default function FooterSection() {
                   src="/hyperliquid-logo.svg" 
                   alt="Hyperliquid" 
                   width={89}
-                  height={14}
+                  height={17}
                   className="h-3.5 w-auto"
                 />
               </div>
@@ -133,7 +131,7 @@ export default function FooterSection() {
                   src="/hyperliquid-logo.svg" 
                   alt="Hyperliquid" 
                   width={95}
-                  height={18}
+                  height={21}
                   className="h-3.5 w-auto"
                 />
               </div>
@@ -179,11 +177,9 @@ export default function FooterSection() {
             <div className="[@media(min-width:380px)]:hidden flex flex-col justify-center items-center gap-3 text-center lg:hidden">
               {/* First row: 3 links */}
               <div className="flex justify-center items-center gap-3">
+           
                 <a href="#" className="text-[#ffffffbd] text-xs font-normal font-['Avenir_Next'] hover:text-white transition-colors whitespace-nowrap">
-                  Disclaimer
-                </a>
-                <a href="#" className="text-[#ffffffbd] text-xs font-normal font-['Avenir_Next'] hover:text-white transition-colors whitespace-nowrap">
-                  Help
+                  Help & Support
                 </a>
                 <a href="#" className="text-[#ffffffbd] text-xs font-normal font-['Avenir_Next'] hover:text-white transition-colors whitespace-nowrap">
                   Privacy Policy
@@ -219,9 +215,9 @@ export default function FooterSection() {
                 </div>
                 
                 {/* Description and Footer Info */}
-                <div className="flex flex-col gap-8">
+                <div className="flex flex-col gap-5">
                   <p className="text-[#ffffffbd] text-2xl font-normal font-['Avenir_Next'] leading-7">
-                    Unlock the latest strategies shaping tomorrow&apos;s financial systems.
+                    Freedom. Power. Control.
                   </p>
                   
                   {/* Powered by and Secured by */}
@@ -234,8 +230,8 @@ export default function FooterSection() {
                         src="/hyperliquid-logo.svg" 
                         alt="Hyperliquid" 
                         width={89}
-                        height={14}
-                        className="h-3.5 w-auto"
+                        height={17}
+                        className="h-4.5 w-auto"
                       />
                     </div>
                     <div className="flex items-center gap-2.5">
@@ -262,7 +258,7 @@ export default function FooterSection() {
                   <div className="relative">
                     <input
                       type="email"
-                      placeholder="What's your email?"
+                      placeholder="Subscribe for email updates from Dexari"
                       className="w-full h-[60px] bg-[#2b2b2b] rounded-full border-2 border-[#6d6d6d]/20 px-6 pr-16 text-white text-base font-medium font-['Avenir_Next'] placeholder-white focus:outline-none focus:border-[#6d6d6d]/40 transition-colors"
                     />
                     <button className="absolute right-2 top-2 w-11 h-11 bg-[#e5dbb7] rounded-full flex items-center justify-center hover:bg-[#e5dbb7]/90 transition-colors">
@@ -271,8 +267,8 @@ export default function FooterSection() {
                       </svg>
                     </button>
                   </div>
-                  <p className="text-[#ffffffbd] text-[13px] font-normal font-['Avenir_Next'] leading-tight">
-                    I confirm that I have read <span className="font-bold">Dexari&apos;s Privacy Policy</span> and agree with it.
+                  <p className="text-[#ffffffbd] text-[13px] font-normal font-['Avenir_Next'] leading-tight text-center">
+                    I confirm that I have read and accepted <span className="font-bold">Dexari&apos;s Privacy Policy</span>.
                   </p>
                 </div>
                 
@@ -313,27 +309,23 @@ export default function FooterSection() {
             <div className="flex justify-between items-center">
               {/* Social Media Links */}
               <div className="flex items-center gap-4">
-                <a href="#" className="hover:opacity-80 transition-opacity">
+                <a href="https://x.com/DexariDotCom" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity">
                   <Image src="/x-icon.svg" alt="X (Twitter)" width={32} height={32} />
                 </a>
-                <a href="#" className="hover:opacity-80 transition-opacity">
+                <a href="https://discord.gg/AAcKKQkEyW" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity">
                   <Image src="/discord-icon.svg" alt="Discord" width={32} height={32} />
                 </a>
-                <a href="#" className="hover:opacity-80 transition-opacity">
+                <a href="https://t.me/DexariDotComOfficial" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity">
                   <Image src="/tg-icon.svg" alt="Telegram" width={32} height={32} />
                 </a>
-                <a href="#" className="hover:opacity-80 transition-opacity">
-                  <Image src="/github-icon.svg" alt="GitHub" width={32} height={32} />
-                </a>
+            
               </div>
               
               {/* Footer Links */}
               <div className="flex items-center gap-6">
+        
                 <a href="#" className="text-[#ffffffbd] text-xs font-normal font-['Avenir_Next'] hover:text-white transition-colors">
-                  Disclaimer
-                </a>
-                <a href="#" className="text-[#ffffffbd] text-xs font-normal font-['Avenir_Next'] hover:text-white transition-colors">
-                  Help
+                  Help & Support
                 </a>
                 <a href="#" className="text-[#ffffffbd] text-xs font-normal font-['Avenir_Next'] hover:text-white transition-colors">
                   Privacy Policy

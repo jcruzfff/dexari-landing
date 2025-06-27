@@ -221,12 +221,7 @@ export default function DocsPage() {
               </div>
             </div>
 
-            <button
-              onClick={() => router.push('/')}
-              className="h-[38px] px-6 rounded-full bg-[#e5dbb7] hover:bg-[#d4c99a] transition-colors text-[#202022] text-sm font-semibold"
-            >
-              Download App
-            </button>
+         
           </div>
         </header>
 

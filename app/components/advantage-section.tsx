@@ -7,28 +7,28 @@ const advantages = [
   {
     id: '01',
     title: 'Self-custody',
-    description: 'You hold the keys. Dexari never touches your assets. Every trade and transfer is secured and verifiable onchain.',
+    description: 'Your keys, your crypto. Only you can access your assets. Export your keys at any time.',
     icon: '/custody-icon.svg',
     position: 'top-left'
   },
   {
     id: '02',
     title: 'Privacy',
-    description: 'No invasive KYC or behavioral profiling. Dexari accounts are yours alone, with activity kept private and encrypted.',
+    description: 'No KYC. No personal data collected. Choose to remain anonymous.',
     icon: '/privacy-icon.svg',
     position: 'top-right'
   },
   {
     id: '03',
     title: 'Permissionless',
-    description: 'No approvals, no gatekeepers. Get started instantly and access onchain.',
+    description: 'No approvals. No lockouts. Trade any available asset instantly on your own terms.',
     icon: '/permissionless-icon.svg',
     position: 'bottom-left'
   },
   {
     id: '04',
     title: 'Transparency',
-    description: 'Every order, balance, and action settles onchain. Audit your activity or Dexari\'s logic.',
+    description: 'Every trade and every balance lives onchain. You can verify everything, anytime.',
     icon: '/transparency-icon.svg',
     position: 'bottom-right'
   }
@@ -99,7 +99,7 @@ export default function AdvantageSection() {
       {/* Header */}
       <div ref={headerRef} className={`text-center mb-1 lg:mb-[-24px] relative z-20 transition-all duration-700 ease-out ${headerVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
         <h2 className="text-white text-3xl sm:text-4xl lg:text-5xl xl:text-[48px] font-['Avenir_Next'] font-normal mb-6 lg:mb-8 leading-tight tracking-[0.1px]">
-          The Dexari advantage
+        CEX-like experience. True ownership.
         </h2>
         
         {/* Learn More Button */}
@@ -126,7 +126,7 @@ export default function AdvantageSection() {
        <div className="relative w-full px-4 sm:px-8 md:px-16 lg:px-24 xl:px-[120px] z-10">
          <div className="max-w-[1224px] mx-auto">
                      {/* Desktop Layout - Only visible on xl screens and above */}
-          <div className="hidden xl:block relative min-h-[700px] xl:min-h-[800px]">
+          <div className="hidden xl:block relative min-h-[650px] xl:min-h-[750px]">
              {/* Self-custody Card - Top Left */}
              <div 
                ref={topLeftRef}
@@ -241,14 +241,14 @@ export default function AdvantageSection() {
                     <h3 className="text-white text-[34px] font-['Avenir_Next'] font-medium leading-[42px] mb-6">
                       {advantages[2].title}
                     </h3>
-                    <p className="text-[#ffffffbd] text-base lg:text-[18px]font-['Avenir_Next'] leading-[24px] font-medium">
+                    <p className="text-[#ffffffbd] text-base lg:text-[18px] font-['Avenir_Next'] leading-[24px] font-medium">
                       {advantages[2].description}
                     </p>
                   </div>
                   
                   {/* Number Badge */}
                   <div className="w-fit border border-[rgba(240,241,243,0.2)] rounded px-4 py-2">
-                  <span className="text-[#ffffffbd] text-[16px] font-['Avenir_Next'] font-medum leading-[24px] ">
+                  <span className="text-[#ffffffbd] text-[16px] font-['Avenir_Next'] font-medium leading-[24px] ">
                       {advantages[2].id}
                     </span>
                   </div>

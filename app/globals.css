@@ -146,6 +146,35 @@
     }
   }
 
+  /* Marquee animations for infinite scrolling */
+  @keyframes marquee-ltr {
+    0% {
+      transform: translateX(0%);
+    }
+
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  @keyframes marquee-rtl {
+    0% {
+      transform: translateX(-50%);
+    }
+
+    100% {
+      transform: translateX(0%);
+    }
+  }
+
+  .animate-marquee-ltr {
+    animation: marquee-ltr 40s linear infinite;
+  }
+
+  .animate-marquee-rtl {
+    animation: marquee-rtl 40s linear infinite;
+  }
+
   /* Custom responsive padding system */
   .responsive-padding {
     @apply px-4;
