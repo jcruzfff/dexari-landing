@@ -110,6 +110,7 @@ export default function FeatureSection() {
                     muted
                     playsInline
                     className="w-full h-auto object-contain object-bottom"
+                    style={{ filter: 'brightness(1) contrast(1.05) saturate(0.9)' }}
                   >
                     <source src="/videos/liquidity.mov" type="video/mp4" /> 
                     Your browser does not support the video tag.
@@ -127,6 +128,7 @@ export default function FeatureSection() {
                     muted
                     playsInline
                     className="w-full h-auto object-contain object-bottom"
+                    style={{ filter: 'brightness(1) contrast(1.05) saturate(0.9)' }}
                   >
                     <source src="/videos/liquidity.mov" type="video/mp4" />
                     Your browser does not support the video tag.
@@ -163,6 +165,7 @@ export default function FeatureSection() {
                     muted
                     playsInline
                     className="w-full h-auto object-contain object-bottom"
+                    style={{ filter: 'brightness(1) contrast(1.05) saturate(0.9)' }}
                   >
                     <source src="/videos/long.mov" type="video/mp4" />
                     Your browser does not support the video tag.
@@ -180,6 +183,7 @@ export default function FeatureSection() {
                     muted
                     playsInline
                     className="w-full h-auto object-contain object-bottom"
+                    style={{ filter: 'brightness(1) contrast(1.05) saturate(0.9)' }}
                   >
                     <source src="/videos/long2.mov" type="video/mp4" />
                     Your browser does not support the video tag.
@@ -212,6 +216,7 @@ export default function FeatureSection() {
                     muted
                     playsInline
                     className="w-full h-auto object-contain object-bottom"
+                    style={{ filter: 'brightness(1) contrast(1.05) saturate(0.9)' }}
                   >
                     <source src="/videos/advanced.mov" type="video/mp4" />
                     Your browser does not support the video tag.
@@ -228,6 +233,7 @@ export default function FeatureSection() {
                     muted
                     playsInline
                     className="w-full h-auto object-contain object-bottom"
+                    style={{ filter: 'brightness(1) contrast(1.05) saturate(0.9)' }}
                   >
                     <source src="/videos/advanced.mov" type="video/mp4" />
                     Your browser does not support the video tag.
@@ -268,6 +274,7 @@ export default function FeatureSection() {
                     muted
                     playsInline
                     className="w-full h-auto object-contain object-bottom"
+                    style={{ filter: 'brightness(1) contrast(1.05) saturate(0.9)' }}
                   >
                     <source src="/videos/deposit.mov" type="video/mp4" />
                     Your browser does not support the video tag.
@@ -284,6 +291,7 @@ export default function FeatureSection() {
                     muted
                     playsInline
                     className="w-full h-auto object-contain object-bottom"
+                    style={{ filter: 'brightness(1) contrast(1.05) saturate(0.9)' }}
                   >
                     <source src="/videos/deposit.mov" type="video/mp4" />
                     Your browser does not support the video tag.

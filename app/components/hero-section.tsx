@@ -101,7 +101,7 @@ export default function HeroSection() {
               {/* Hero image with proper aspect ratio */}
               <div className="relative w-full h-full max-w-[442px] mx-auto">
                 <Image 
-                  src="/hero-image4.png" 
+                  src="/hero-image1.svg" 
                   alt="dexari-hero-image" 
                   width={442}
                   height={644}
