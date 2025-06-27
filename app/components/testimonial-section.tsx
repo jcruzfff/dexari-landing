@@ -172,9 +172,9 @@ export default function TestimonialSection() {
                 </blockquote>
 
                 {/* Bottom Section */}
-                <div className="flex flex-col gap-6">
+                <div className="flex flex-col gap-6 items-center">
                   {/* User Profile */}
-                  <div className="flex flex-col gap-[22px] w-[201px]">
+                  <div className="flex flex-col gap-[22px] items-center">
                     {/* Profile Picture */}
                     <div className="bg-[#2b2b2b] rounded-full w-[104px] h-[104px] flex items-center justify-center overflow-hidden">
                       <Image
@@ -187,7 +187,7 @@ export default function TestimonialSection() {
                     </div>
 
                     {/* User Info */}
-                    <div className="text-left">
+                    <div className="text-center">
                       <p className="text-[#ffffff] text-[21.37px] font-['Avenir_Next'] font-semibold mb-2 leading-normal">
                         {currentTestimonialData.title}
                       </p>
@@ -198,7 +198,7 @@ export default function TestimonialSection() {
                   </div>
 
                   {/* Navigation Arrows */}
-                  <div className="flex flex-row gap-[15.529px] items-center">
+                  <div className="flex flex-row gap-[15.529px] items-center justify-center">
                     <button
                       onClick={goToPrevious}
                       className="bg-[#343434] rounded-3xl w-12 h-12 flex items-center justify-center transition-opacity hover:opacity-80"

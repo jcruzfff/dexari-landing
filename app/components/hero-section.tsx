@@ -129,7 +129,7 @@ export default function HeroSection() {
                     alt="Hyperliquid" 
                     width={186}
                     height={37}
-                    className="h-[37px] w-auto"
+                    className="h-[37px] w-auto opacity-60"
                   />
                 </div>
                 {/* Turnkey Logo */}
@@ -139,7 +139,7 @@ export default function HeroSection() {
                     alt="Turnkey" 
                     width={235}
                     height={37}
-                    className="h-6 w-auto"
+                    className="h-6 w-auto opacity-60"
                     quality={100}
                   />
                 </div>
@@ -150,7 +150,7 @@ export default function HeroSection() {
                     alt="Partner Logo" 
                     width={137}
                     height={21}
-                    className="h-5 w-auto"
+                    className="h-5 w-auto opacity-60"
                   />
                 </div>
                 {/* Partner Logo 2 */}
@@ -160,7 +160,7 @@ export default function HeroSection() {
                     alt="Partner Logo" 
                     width={101}
                     height={21}
-                    className="h-5 w-auto"
+                    className="h-5 w-auto opacity-60"
                   />
                 </div>
                 {/* Partner Logo 3 */}
@@ -170,7 +170,7 @@ export default function HeroSection() {
                     alt="Partner Logo" 
                     width={87}
                     height={21}
-                    className="h-5 w-auto"
+                    className="h-5 w-auto opacity-60"
                   />
                 </div>
                 {/* Partner Logo 4 */}
@@ -180,7 +180,7 @@ export default function HeroSection() {
                     alt="Partner Logo" 
                     width={99}
                     height={21}
-                    className="h-6 w-auto"
+                    className="h-6 w-auto opacity-60"
                   />
                 </div>
                 {/* Partner Logo 5 */}
@@ -190,7 +190,7 @@ export default function HeroSection() {
                     alt="Partner Logo" 
                     width={110}
                     height={21}
-                    className="h-5 w-auto"
+                    className="h-5 w-auto opacity-60"
                   />
                 </div>
                 {/* Partner Logo 6 */}
@@ -200,7 +200,7 @@ export default function HeroSection() {
                     alt="Partner Logo" 
                     width={70}
                     height={21}
-                    className="h-5 w-auto"
+                    className="h-5 w-auto opacity-60"
                   />
                 </div>
               </div>
