@@ -101,12 +101,13 @@ export default function HeroSection() {
               {/* Hero image with proper aspect ratio */}
               <div className="relative w-full h-full max-w-[442px] mx-auto">
                 <Image 
-                  src="/hero-image1.png" 
+                  src="/hero-image4.png" 
                   alt="dexari-hero-image" 
                   width={442}
                   height={644}
                   className="w-full h-full object-contain object-center"
                   priority
+                  quality={100}
                 />
               </div>
             </div>
